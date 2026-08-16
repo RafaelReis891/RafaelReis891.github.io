@@ -666,34 +666,98 @@
         }
 
 
-        /* GOOGLE PLAY INDICATOR */
+        /* =========================================================
+        STORE LINKS
+        ========================================================= */
 
-        .play-link {
-            display: inline-flex;
+        .store-actions {
+            display: flex;
 
             align-items: center;
 
-            gap: 6px;
+            flex-wrap: wrap;
 
-            margin-top: 11px;
+            gap: 8px;
 
-            color: var(--green-light);
-
-            font-size: 12px;
-
-            font-weight: bold;
+            margin-top: 12px;
         }
 
-        .play-link::after {
-            content: "↗";
+        .store-link {
+            display: inline-flex;
 
-            font-size: 13px;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 32px;
+
+            padding: 0 11px;
+
+            border-radius: 7px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+
+        /* GOOGLE PLAY */
+
+        .play-link {
+            color: var(--green-light);
+
+            background: rgba(88,168,61,0.10);
+
+            border: 1px solid rgba(121,201,87,0.18);
+        }
+
+        .play-link:hover {
+            background: rgba(88,168,61,0.18);
+
+            border-color: rgba(121,201,87,0.35);
+
+            transform: translateY(-1px);
+        }
+
+
+        /* APK */
+
+        .apk-link {
+            color: var(--text);
+
+            background: rgba(255,255,255,0.035);
+
+            border: 1px solid var(--border);
+        }
+
+        .apk-link:hover {
+            color: var(--green-light);
+
+            background: rgba(255,255,255,0.07);
+
+            border-color: rgba(121,201,87,0.25);
+
+            transform: translateY(-1px);
+        }
+
+
+        /* ÍCONE/SETA */
+
+        .store-link-arrow {
+            margin-left: 5px;
+
+            font-size: 12px;
 
             transition: 0.2s;
         }
 
-        .store-card:hover .play-link::after {
-            transform: translate(2px, -2px);
+        .store-link:hover .store-link-arrow {
+            transform: translate(2px, -1px);
         }
 
 
@@ -1178,126 +1242,176 @@
 
 
     <!-- =========================================================
-         OUR GAMES
-    ========================================================== -->
+     OUR GAMES
+========================================================== -->
 
-    <section class="our-games" id="games">
+<section class="our-games" id="games">
 
-        <div class="container">
+    <div class="container">
 
+        <div class="section-label">
+            Silicon Games
+        </div>
 
-            <div class="section-label">
-                Silicon Games
-            </div>
+        <h2>
+            Our Games
+        </h2>
 
-
-            <h2>
-                Our Games
-            </h2>
-
-
-            <p class="section-description">
-
-                Explore the games currently being developed
-                and published by Silicon Games.
-
-            </p>
+        <p class="section-description">
+            Explore the games currently being developed
+            and published by Silicon Games.
+        </p>
 
 
-            <div class="games-list">
+        <div class="games-list">
 
 
-                <!-- REAL FARM -->
+            <!-- =================================================
+                 REAL FARM
+            ================================================== -->
 
-                <a
-                    class="store-card"
-                    href="https://play.google.com/store/apps/details?id=com.Seeliefy.RealFarm"
-                    target="_blank"
-                    rel="noopener noreferrer">
+            <div class="store-card">
 
-
-                    <img
-                        src="https://play-lh.googleusercontent.com/BiWobYlSleLgkpb1fR9cYuHq6xzCdAXJwRN3VFkfuD-nXZf26eOF2MXzv7cq6bd-OIzAL2_FrCsbJAkZTQdMRQ=w240-h480-rw"
-                        alt="Real Farm Simulator"
-                        class="store-icon">
+                <img
+                    src="https://play-lh.googleusercontent.com/BiWobYlSleLgkpb1fR9cYuHq6xzCdAXJwRN3VFkfuD-nXZf26eOF2MXzv7cq6bd-OIzAL2_FrCsbJAkZTQdMRQ=w240-h480-rw"
+                    alt="Real Farm Simulator"
+                    class="store-icon">
 
 
-                    <div class="store-content">
+                <div class="store-content">
 
-                        <span class="store-label">
-                            Android · Google Play
-                        </span>
-
-
-                        <h3>
-                            Real Farm Simulator
-                        </h3>
+                    <span class="store-label">
+                        Android · Google Play
+                    </span>
 
 
-                        <p>
-                            Plant, harvest, raise animals and
-                            manage your own farm in a realistic
-                            mobile farming simulator.
-                        </p>
+                    <h3>
+                        Real Farm Simulator
+                    </h3>
 
 
-                        <span class="play-link">
-                            View on Google Play
-                        </span>
-
-                    </div>
-
-                </a>
+                    <p>
+                        Plant, harvest, raise animals and
+                        manage your own farm in a realistic
+                        mobile farming simulator.
+                    </p>
 
 
+                    <div class="store-actions">
 
-                <!-- CITY BUS -->
+                        <a
+                            class="store-link play-link"
+                            href="https://play.google.com/store/apps/details?id=com.Seeliefy.RealFarm"
+                            target="_blank"
+                            rel="noopener noreferrer">
 
-                <a
-                    class="store-card"
-                    href="https://play.google.com/store/apps/details?id=com.SiliconGames.CityBusSimulator"
-                    target="_blank"
-                    rel="noopener noreferrer">
+                            Google Play
 
+                            <span class="store-link-arrow">
+                                ↗
+                            </span>
 
-                    <img
-                        src="https://play-lh.googleusercontent.com/4sGNqBMAdftK_eAkx-pIZmNh4DjDd3LSmcp2tSWeLZ47a2cPJJ13C0cNM2a88EFLWEGoTXRoul0M9Ecis-F1Jw=s48-rw"
-                        alt="City Bus Simulator"
-                        class="store-icon">
-
-
-                    <div class="store-content">
-
-                        <span class="store-label">
-                            Android · Google Play
-                        </span>
+                        </a>
 
 
-                        <h3>
-                            City Bus Simulator
-                        </h3>
+                        <a
+                            class="store-link apk-link"
+                            href="https://docs.google.com/uc?export=download&id=1IYAv5Xwgr7zjacJWGUZ0IoLNbbirmtj2"
+                            target="_blank"
+                            rel="noopener noreferrer">
 
+                            Download APK
 
-                        <p>
-                            Take the wheel, transport passengers
-                            and experience the challenge of
-                            driving a city bus.
-                        </p>
+                            <span class="store-link-arrow">
+                                ↓
+                            </span>
 
-
-                        <span class="play-link">
-                            View on Google Play
-                        </span>
+                        </a>
 
                     </div>
 
-                </a>
+                </div>
 
             </div>
+
+
+
+            <!-- =================================================
+                 CITY BUS SIMULATOR
+            ================================================== -->
+
+            <div class="store-card">
+
+                <img
+                    src="https://play-lh.googleusercontent.com/4sGNqBMAdftK_eAkx-pIZmNh4DjDd3LSmcp2tSWeLZ47a2cPJJ13C0cNM2a88EFLWEGoTXRoul0M9Ecis-F1Jw=s48-rw"
+                    alt="City Bus Simulator"
+                    class="store-icon">
+
+
+                <div class="store-content">
+
+                    <span class="store-label">
+                        Android · Google Play
+                    </span>
+
+
+                    <h3>
+                        City Bus Simulator
+                    </h3>
+
+
+                    <p>
+                        Take the wheel, transport passengers
+                        and experience the challenge of
+                        driving a city bus.
+                    </p>
+
+
+                    <div class="store-actions">
+
+                        <a
+                            class="store-link play-link"
+                            href="https://play.google.com/store/apps/details?id=com.SiliconGames.CityBusSimulator"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Google Play
+
+                            <span class="store-link-arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+
+                        <!-- COLOQUE O LINK DO DRIVE AQUI -->
+
+                        <a
+                            class="store-link apk-link"
+                            href="#"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Download APK
+
+                            <span class="store-link-arrow">
+                                ↓
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 
