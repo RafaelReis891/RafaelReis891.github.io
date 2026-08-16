@@ -1,32 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="google-adsense-account"
-        content="ca-pub-4460160277716086">
+    <meta name="google-adsense-account" content="ca-pub-4460160277716086">
 
     <title>Silicon Games — Real Farm Simulator</title>
 
-    <meta
-        name="description"
-        content="Silicon Games — desenvolvedora independente de jogos. Conheça Real Farm Simulator, City Bus Simulator e nossos próximos projetos.">
+    <meta name="description"
+          content="Silicon Games — desenvolvedora independente de jogos. Conheça Real Farm Simulator, City Bus Simulator e nossos próximos projetos.">
 
-    <meta
-        name="theme-color"
-        content="#101812">
+    <meta name="theme-color" content="#101812">
 
-    <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4460160277716086"
-        crossorigin="anonymous">
-    </script>
-
+    <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4460160277716086"
+            crossorigin="anonymous"></script>
 
     <style>
 
@@ -37,7 +26,6 @@
         }
 
         :root {
-
             --green: #58a83d;
             --green-light: #79c957;
             --green-dark: #183d20;
@@ -52,26 +40,16 @@
             --border: rgba(255,255,255,0.08);
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
+            font-family: Arial, Helvetica, sans-serif;
             background: var(--dark);
-
             color: var(--text);
-
             line-height: 1.6;
         }
-
 
         a {
             color: inherit;
@@ -81,34 +59,26 @@
 
         /* =========================================================
            HEADER
-        ========================================================== */
+        ========================================================= */
 
         header {
-
             position: fixed;
-
             top: 0;
             left: 0;
 
             width: 100%;
-
             z-index: 1000;
 
-            background:
-                rgba(11,16,13,0.82);
+            background: rgba(11, 16, 13, 0.82);
 
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
 
-            border-bottom:
-                1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
 
-
         .nav {
-
             max-width: 1150px;
-
             margin: auto;
 
             min-height: 72px;
@@ -116,9 +86,7 @@
             padding: 0 24px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
         }
 
@@ -126,55 +94,33 @@
         /* LOGO */
 
         .brand {
-
             display: flex;
-
             align-items: center;
 
             transition: 0.2s;
         }
 
-
         .brand:hover {
             opacity: 0.85;
         }
 
-
         .brand-logo {
-
             width: 170px;
             height: 48px;
 
             object-fit: contain;
-
             object-position: left center;
 
             display: block;
         }
 
 
-        /* NAVIGATION */
-
-        .nav-right {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 28px;
-        }
-
-
         nav {
-
             display: flex;
-
             gap: 28px;
         }
-
 
         nav a {
-
             color: var(--muted);
 
             font-size: 14px;
@@ -182,203 +128,49 @@
             transition: 0.2s;
         }
 
-
         nav a:hover {
             color: var(--green-light);
         }
 
 
-        /* LANGUAGE */
-
-        .language-selector {
-
-            position: relative;
-        }
-
-
-        .language-button {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 6px;
-
-            min-height: 34px;
-
-            padding: 0 10px;
-
-            border-radius: 8px;
-
-            border:
-                1px solid var(--border);
-
-            background:
-                rgba(255,255,255,0.03);
-
-            color: var(--text);
-
-            cursor: pointer;
-
-            font-size: 11px;
-
-            font-weight: bold;
-
-            transition: 0.2s;
-        }
-
-
-        .language-button:hover {
-
-            background:
-                rgba(255,255,255,0.07);
-
-            border-color:
-                rgba(121,201,87,0.3);
-        }
-
-
-        .language-menu {
-
-            position: absolute;
-
-            top: calc(100% + 8px);
-
-            right: 0;
-
-            min-width: 145px;
-
-            padding: 6px;
-
-            border-radius: 10px;
-
-            border:
-                1px solid var(--border);
-
-            background:
-                rgba(16,24,18,0.98);
-
-            box-shadow:
-                0 15px 40px rgba(0,0,0,0.35);
-
-            opacity: 0;
-
-            visibility: hidden;
-
-            transform:
-                translateY(-5px);
-
-            transition: 0.2s;
-        }
-
-
-        .language-selector.open
-        .language-menu {
-
-            opacity: 1;
-
-            visibility: visible;
-
-            transform:
-                translateY(0);
-        }
-
-
-        .language-option {
-
-            width: 100%;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 9px;
-
-            padding: 9px 10px;
-
-            border: 0;
-
-            border-radius: 7px;
-
-            background: transparent;
-
-            color: var(--muted);
-
-            cursor: pointer;
-
-            text-align: left;
-
-            font-size: 12px;
-        }
-
-
-        .language-option:hover {
-
-            background:
-                rgba(88,168,61,0.10);
-
-            color: var(--green-light);
-        }
-
-
-        .language-option.active {
-
-            color: var(--green-light);
-
-            background:
-                rgba(88,168,61,0.08);
-        }
-
-
         /* =========================================================
            HERO
-        ========================================================== */
+        ========================================================= */
 
         .hero {
-
             min-height: 720px;
 
             display: flex;
-
             align-items: center;
 
             position: relative;
-
             overflow: hidden;
 
             background:
-
                 radial-gradient(
                     circle at 80% 35%,
                     rgba(88,168,61,0.18),
                     transparent 35%
                 ),
-
                 radial-gradient(
                     circle at 20% 80%,
                     rgba(37,90,44,0.18),
                     transparent 35%
                 ),
-
                 var(--dark);
         }
 
-
         .hero::before {
-
             content: "";
 
             position: absolute;
-
             inset: 0;
 
             background-image:
-
                 linear-gradient(
                     rgba(255,255,255,0.018) 1px,
                     transparent 1px
                 ),
-
                 linear-gradient(
                     90deg,
                     rgba(255,255,255,0.018) 1px,
@@ -387,58 +179,45 @@
 
             background-size: 60px 60px;
 
-            mask-image:
-                linear-gradient(
-                    to bottom,
-                    black,
-                    transparent
-                );
+            mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent
+            );
 
-            -webkit-mask-image:
-                linear-gradient(
-                    to bottom,
-                    black,
-                    transparent
-                );
+            -webkit-mask-image: linear-gradient(
+                to bottom,
+                black,
+                transparent
+            );
         }
 
-
         .hero-content {
-
             width: 100%;
-
             max-width: 1150px;
 
             margin: auto;
 
-            padding:
-                130px 24px 80px;
+            padding: 130px 24px 80px;
 
             position: relative;
-
             z-index: 2;
         }
 
-
         .tag {
-
             display: inline-flex;
 
             padding: 7px 13px;
 
-            border:
-                1px solid
-                rgba(121,201,87,0.25);
+            border: 1px solid rgba(121,201,87,0.25);
 
             border-radius: 30px;
 
             color: var(--green-light);
 
-            background:
-                rgba(88,168,61,0.08);
+            background: rgba(88,168,61,0.08);
 
             font-size: 12px;
-
             font-weight: bold;
 
             letter-spacing: 1.4px;
@@ -448,13 +227,10 @@
             margin-bottom: 24px;
         }
 
-
         h1 {
-
             max-width: 800px;
 
-            font-size:
-                clamp(48px, 7vw, 82px);
+            font-size: clamp(48px, 7vw, 82px);
 
             line-height: 0.98;
 
@@ -463,14 +239,11 @@
             margin-bottom: 26px;
         }
 
-
         h1 span {
             color: var(--green-light);
         }
 
-
         .hero-description {
-
             max-width: 650px;
 
             color: var(--muted);
@@ -486,7 +259,6 @@
         /* BUTTONS */
 
         .buttons {
-
             display: flex;
 
             flex-wrap: wrap;
@@ -494,13 +266,10 @@
             gap: 14px;
         }
 
-
         .button {
-
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             min-height: 48px;
@@ -510,58 +279,42 @@
             border-radius: 9px;
 
             font-weight: bold;
-
             font-size: 14px;
 
             transition: 0.2s;
         }
 
-
         .button-primary {
-
             background: var(--green);
 
             color: #071007;
 
             box-shadow:
-                0 10px 30px
-                rgba(88,168,61,0.22);
+                0 10px 30px rgba(88,168,61,0.22);
         }
-
 
         .button-primary:hover {
+            background: var(--green-light);
 
-            background:
-                var(--green-light);
-
-            transform:
-                translateY(-2px);
+            transform: translateY(-2px);
         }
 
-
         .button-secondary {
+            border: 1px solid var(--border);
 
-            border:
-                1px solid var(--border);
-
-            background:
-                rgba(255,255,255,0.03);
+            background: rgba(255,255,255,0.03);
 
             color: var(--text);
         }
 
-
         .button-secondary:hover {
-
-            background:
-                rgba(255,255,255,0.07);
+            background: rgba(255,255,255,0.07);
         }
 
 
         /* FARM DECORATION */
 
         .farm-visual {
-
             position: absolute;
 
             right: -80px;
@@ -575,54 +328,39 @@
             transform: rotate(-8deg);
         }
 
-
         .farm-circle {
-
             width: 100%;
             height: 100%;
 
             border-radius: 50%;
 
-            border:
-                1px solid
-                rgba(88,168,61,0.12);
+            border: 1px solid rgba(88,168,61,0.12);
 
             box-shadow:
-
-                0 0 0 50px
-                rgba(88,168,61,0.02),
-
-                0 0 0 100px
-                rgba(88,168,61,0.02),
-
-                0 0 0 150px
-                rgba(88,168,61,0.015);
+                0 0 0 50px rgba(88,168,61,0.02),
+                0 0 0 100px rgba(88,168,61,0.02),
+                0 0 0 150px rgba(88,168,61,0.015);
         }
 
 
         /* =========================================================
            SECTIONS
-        ========================================================== */
+        ========================================================= */
 
         section {
             padding: 100px 24px;
         }
 
-
         .container {
-
             max-width: 1150px;
 
             margin: auto;
         }
 
-
         .section-label {
-
             color: var(--green-light);
 
             font-size: 12px;
-
             font-weight: bold;
 
             letter-spacing: 2px;
@@ -632,11 +370,8 @@
             margin-bottom: 14px;
         }
 
-
         h2 {
-
-            font-size:
-                clamp(34px, 5vw, 52px);
+            font-size: clamp(34px, 5vw, 52px);
 
             line-height: 1.05;
 
@@ -645,9 +380,7 @@
             margin-bottom: 20px;
         }
 
-
         .section-description {
-
             color: var(--muted);
 
             max-width: 680px;
@@ -658,37 +391,30 @@
 
         /* =========================================================
            REAL FARM
-        ========================================================== */
+        ========================================================= */
 
         .game {
             background: var(--dark-2);
         }
 
-
         .game-grid {
-
             margin-top: 55px;
 
             display: grid;
 
-            grid-template-columns:
-                1.2fr 0.8fr;
+            grid-template-columns: 1.2fr 0.8fr;
 
             gap: 24px;
         }
 
-
         .game-card {
-
             min-height: 350px;
 
             border-radius: 18px;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             background:
-
                 linear-gradient(
                     145deg,
                     rgba(88,168,61,0.14),
@@ -708,9 +434,7 @@
             position: relative;
         }
 
-
         .game-card::before {
-
             content: "REAL FARM";
 
             position: absolute;
@@ -722,24 +446,18 @@
 
             font-weight: 900;
 
-            color:
-                rgba(255,255,255,0.025);
+            color: rgba(255,255,255,0.025);
 
-            transform:
-                rotate(-10deg);
+            transform: rotate(-10deg);
         }
 
-
         .game-card h3 {
-
             font-size: 32px;
 
             margin-bottom: 12px;
         }
 
-
         .game-card p {
-
             color: var(--muted);
 
             max-width: 600px;
@@ -749,62 +467,48 @@
         /* FEATURES */
 
         .feature-grid {
-
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 14px;
         }
 
-
         .feature {
-
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             border-radius: 14px;
 
             padding: 24px;
 
-            background:
-                rgba(255,255,255,0.025);
+            background: rgba(255,255,255,0.025);
         }
 
-
         .feature-icon {
-
             width: 40px;
             height: 40px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             border-radius: 10px;
 
-            background:
-                rgba(88,168,61,0.12);
+            background: rgba(88,168,61,0.12);
 
-            color:
-                var(--green-light);
+            color: var(--green-light);
 
             margin-bottom: 15px;
 
             font-size: 18px;
         }
 
-
         .feature h4 {
             margin-bottom: 6px;
         }
 
-
         .feature p {
-
             color: var(--muted);
 
             font-size: 13px;
@@ -813,28 +517,26 @@
 
         /* =========================================================
            OUR GAMES
-        ========================================================== */
+        ========================================================= */
 
         .our-games {
             background: var(--dark);
         }
 
-
         .games-list {
-
             margin-top: 45px;
 
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 20px;
         }
 
 
-        .store-card {
+        /* GAME STORE CARD */
 
+        .store-card {
             display: flex;
 
             align-items: center;
@@ -847,11 +549,9 @@
 
             border-radius: 18px;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             background:
-
                 linear-gradient(
                     145deg,
                     rgba(255,255,255,0.045),
@@ -863,19 +563,13 @@
             overflow: hidden;
 
             transition:
-
                 transform 0.25s ease,
-
                 border-color 0.25s ease,
-
                 background 0.25s ease,
-
                 box-shadow 0.25s ease;
         }
 
-
         .store-card::after {
-
             content: "";
 
             position: absolute;
@@ -888,23 +582,17 @@
 
             border-radius: 50%;
 
-            background:
-                rgba(88,168,61,0.08);
+            background: rgba(88,168,61,0.08);
 
             pointer-events: none;
         }
 
-
         .store-card:hover {
+            transform: translateY(-5px);
 
-            transform:
-                translateY(-5px);
-
-            border-color:
-                rgba(121,201,87,0.35);
+            border-color: rgba(121,201,87,0.35);
 
             background:
-
                 linear-gradient(
                     145deg,
                     rgba(88,168,61,0.10),
@@ -912,39 +600,32 @@
                 );
 
             box-shadow:
-                0 18px 45px
-                rgba(0,0,0,0.25);
+                0 18px 45px rgba(0,0,0,0.25);
         }
 
 
-        /* ICON */
+        /* GAME ICON */
 
         .store-icon {
-
             width: 92px;
             height: 92px;
 
-            flex:
-                0 0 92px;
+            flex: 0 0 92px;
 
             border-radius: 20px;
 
             object-fit: cover;
 
             box-shadow:
-                0 10px 30px
-                rgba(0,0,0,0.35);
+                0 10px 30px rgba(0,0,0,0.35);
 
-            border:
-                1px solid
-                rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.08);
         }
 
 
-        /* CONTENT */
+        /* CARD CONTENT */
 
         .store-content {
-
             position: relative;
 
             z-index: 2;
@@ -952,13 +633,10 @@
             min-width: 0;
         }
 
-
         .store-label {
-
             display: block;
 
-            color:
-                var(--green-light);
+            color: var(--green-light);
 
             font-size: 10px;
 
@@ -971,9 +649,7 @@
             margin-bottom: 5px;
         }
 
-
         .store-content h3 {
-
             font-size: 21px;
 
             line-height: 1.2;
@@ -981,9 +657,7 @@
             margin-bottom: 7px;
         }
 
-
         .store-content p {
-
             color: var(--muted);
 
             font-size: 13px;
@@ -992,10 +666,11 @@
         }
 
 
-        /* STORE BUTTONS */
+        /* =========================================================
+        STORE LINKS
+        ========================================================= */
 
         .store-actions {
-
             display: flex;
 
             align-items: center;
@@ -1007,13 +682,10 @@
             margin-top: 12px;
         }
 
-
         .store-link {
-
             display: inline-flex;
 
             align-items: center;
-
             justify-content: center;
 
             min-height: 32px;
@@ -1027,75 +699,56 @@
             font-weight: bold;
 
             transition:
-
                 background 0.2s ease,
-
                 border-color 0.2s ease,
-
                 color 0.2s ease,
-
                 transform 0.2s ease;
         }
 
 
+        /* GOOGLE PLAY */
+
         .play-link {
+            color: var(--green-light);
 
-            color:
-                var(--green-light);
+            background: rgba(88,168,61,0.10);
 
-            background:
-                rgba(88,168,61,0.10);
-
-            border:
-                1px solid
-                rgba(121,201,87,0.18);
+            border: 1px solid rgba(121,201,87,0.18);
         }
-
 
         .play-link:hover {
+            background: rgba(88,168,61,0.18);
 
-            background:
-                rgba(88,168,61,0.18);
+            border-color: rgba(121,201,87,0.35);
 
-            border-color:
-                rgba(121,201,87,0.35);
-
-            transform:
-                translateY(-1px);
+            transform: translateY(-1px);
         }
 
+
+        /* APK */
 
         .apk-link {
+            color: var(--text);
 
-            color:
-                var(--text);
+            background: rgba(255,255,255,0.035);
 
-            background:
-                rgba(255,255,255,0.035);
-
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
         }
-
 
         .apk-link:hover {
+            color: var(--green-light);
 
-            color:
-                var(--green-light);
+            background: rgba(255,255,255,0.07);
 
-            background:
-                rgba(255,255,255,0.07);
+            border-color: rgba(121,201,87,0.25);
 
-            border-color:
-                rgba(121,201,87,0.25);
-
-            transform:
-                translateY(-1px);
+            transform: translateY(-1px);
         }
 
 
-        .store-link-arrow {
+        /* ÍCONE/SETA */
 
+        .store-link-arrow {
             margin-left: 5px;
 
             font-size: 12px;
@@ -1103,41 +756,32 @@
             transition: 0.2s;
         }
 
-
-        .store-link:hover
-        .store-link-arrow {
-
-            transform:
-                translate(2px,-1px);
+        .store-link:hover .store-link-arrow {
+            transform: translate(2px, -1px);
         }
 
 
         /* =========================================================
            ABOUT
-        ========================================================== */
+        ========================================================= */
 
         .about {
             background: var(--dark-2);
         }
 
-
         .about-grid {
-
             margin-top: 55px;
 
             display: grid;
 
-            grid-template-columns:
-                1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 70px;
 
             align-items: center;
         }
 
-
         .about-text p {
-
             color: var(--muted);
 
             margin-bottom: 18px;
@@ -1145,18 +789,14 @@
             font-size: 16px;
         }
 
-
         .company-card {
-
             padding: 40px;
 
             border-radius: 18px;
 
-            border:
-                1px solid var(--border);
+            border: 1px solid var(--border);
 
             background:
-
                 linear-gradient(
                     145deg,
                     rgba(255,255,255,0.05),
@@ -1164,9 +804,7 @@
                 );
         }
 
-
         .company-logo {
-
             font-size: 30px;
 
             font-weight: 900;
@@ -1174,11 +812,9 @@
             margin-bottom: 20px;
         }
 
-
         .company-logo span {
             color: var(--green-light);
         }
-
 
         .company-card p {
             color: var(--muted);
@@ -1187,14 +823,12 @@
 
         /* =========================================================
            CTA
-        ========================================================== */
+        ========================================================= */
 
         .cta {
-
             padding: 80px 24px;
 
             background:
-
                 linear-gradient(
                     135deg,
                     #183d20,
@@ -1202,51 +836,38 @@
                 );
         }
 
-
         .cta-box {
             text-align: center;
         }
 
-
         .cta h2 {
-
             max-width: 700px;
 
-            margin:
-                0 auto 18px;
+            margin: 0 auto 18px;
         }
 
-
         .cta p {
-
             color: #b8c5ba;
 
             max-width: 600px;
 
-            margin:
-                0 auto 30px;
+            margin: 0 auto 30px;
         }
 
 
         /* =========================================================
            FOOTER
-        ========================================================== */
+        ========================================================= */
 
         footer {
+            border-top: 1px solid var(--border);
 
-            border-top:
-                1px solid var(--border);
+            background: #080c09;
 
-            background:
-                #080c09;
-
-            padding:
-                30px 24px;
+            padding: 30px 24px;
         }
 
-
         .footer-content {
-
             max-width: 1150px;
 
             margin: auto;
@@ -1260,19 +881,15 @@
             gap: 20px;
         }
 
-
         .footer-brand {
             font-weight: bold;
         }
-
 
         .footer-brand span {
             color: var(--green-light);
         }
 
-
         footer p {
-
             color: #6f7a71;
 
             font-size: 12px;
@@ -1281,34 +898,24 @@
 
         /* =========================================================
            MOBILE
-        ========================================================== */
+        ========================================================= */
 
         @media (max-width: 800px) {
-
-            .nav-right {
-                gap: 12px;
-            }
-
 
             nav {
                 display: none;
             }
 
-
             .hero {
                 min-height: 680px;
             }
-
 
             .hero-content {
                 padding-top: 120px;
             }
 
-
             .farm-visual {
-
                 right: -250px;
-
                 bottom: -80px;
 
                 width: 400px;
@@ -1317,39 +924,29 @@
                 opacity: 0.4;
             }
 
-
             .game-grid,
             .about-grid,
             .games-list {
-
                 grid-template-columns: 1fr;
             }
 
-
             .feature-grid {
-
-                grid-template-columns:
-                    1fr 1fr;
+                grid-template-columns: 1fr 1fr;
             }
-
 
             .about-grid {
                 gap: 35px;
             }
 
-
             h1 {
                 letter-spacing: -2px;
             }
 
-
             .footer-content {
-
                 flex-direction: column;
 
                 text-align: center;
             }
-
         }
 
 
@@ -1359,46 +956,34 @@
                 padding: 75px 20px;
             }
 
-
             .nav {
                 padding: 0 20px;
             }
 
-
             .brand-logo {
-
                 width: 145px;
-
                 height: 44px;
             }
 
-
             .feature-grid {
-
                 grid-template-columns: 1fr;
             }
-
 
             .game-card {
                 padding: 28px;
             }
 
-
             .company-card {
                 padding: 28px;
             }
 
-
             .store-card {
-
                 padding: 18px;
 
                 gap: 16px;
             }
 
-
             .store-icon {
-
                 width: 72px;
                 height: 72px;
 
@@ -1407,47 +992,27 @@
                 border-radius: 16px;
             }
 
-
             .store-content h3 {
                 font-size: 18px;
             }
 
-
             .store-content p {
                 font-size: 12px;
             }
-
-
-            .language-button {
-
-                min-height: 32px;
-
-                padding:
-                    0 8px;
-            }
-
         }
 
     </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================================================
-     HEADER
-========================================================== -->
-
 <header>
 
     <div class="nav">
 
-
-        <a
-            href="#"
-            class="brand">
+        <a href="#" class="brand">
 
             <img
                 src="logo.png"
@@ -1457,431 +1022,244 @@
         </a>
 
 
-        <div class="nav-right">
+        <nav>
 
+            <a href="#game">
+                Real Farm
+            </a>
 
-            <nav>
+            <a href="#games">
+                Games
+            </a>
 
-                <a
-                    href="#game"
-                    data-i18n="navRealFarm">
-                    Real Farm
-                </a>
+            <a href="#studio">
+                Studio
+            </a>
 
-                <a
-                    href="#games"
-                    data-i18n="navGames">
-                    Games
-                </a>
-
-                <a
-                    href="#studio"
-                    data-i18n="navStudio">
-                    Studio
-                </a>
-
-            </nav>
-
-
-            <!-- LANGUAGE -->
-
-            <div
-                class="language-selector"
-                id="languageSelector">
-
-
-                <button
-                    class="language-button"
-                    id="languageButton"
-                    type="button">
-
-                    <span id="currentFlag">
-                        🇧🇷
-                    </span>
-
-                    <span id="currentLanguage">
-                        PT
-                    </span>
-
-                    <span>
-                        ▾
-                    </span>
-
-                </button>
-
-
-                <div class="language-menu">
-
-
-                    <button
-                        class="language-option"
-                        data-language="pt"
-                        type="button">
-
-                        🇧🇷
-
-                        <span>
-                            Português
-                        </span>
-
-                    </button>
-
-
-                    <button
-                        class="language-option"
-                        data-language="en"
-                        type="button">
-
-                        🇺🇸
-
-                        <span>
-                            English
-                        </span>
-
-                    </button>
-
-
-                    <button
-                        class="language-option"
-                        data-language="es"
-                        type="button">
-
-                        🇪🇸
-
-                        <span>
-                            Español
-                        </span>
-
-                    </button>
-
-
-                </div>
-
-            </div>
-
-        </div>
+        </nav>
 
     </div>
 
 </header>
 
 
-
 <main>
 
 
-<!-- =========================================================
-     HERO
-========================================================== -->
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
 
-<section class="hero">
+    <section class="hero">
 
+        <div class="hero-content">
 
-    <div class="hero-content">
-
-
-        <div
-            class="tag"
-            data-i18n="heroTag">
-
-            Independent Game Studio
-
-        </div>
+            <div class="tag">
+                Independent Game Studio
+            </div>
 
 
-        <h1>
-
-            <span data-i18n="heroTitle1">
-                Farming made
-            </span>
-
-            <br>
-
-            <span data-i18n="heroTitle2">
-                real.
-            </span>
-
-        </h1>
+            <h1>
+                Farming made<br>
+                <span>real.</span>
+            </h1>
 
 
-        <p
-            class="hero-description"
-            data-i18n="heroDescription">
+            <p class="hero-description">
 
-            Real Farm Simulator brings the experience of modern
-            agriculture to mobile, combining vehicles, machinery,
-            crops and the challenges of running your own farm.
+                Real Farm Simulator brings the experience of modern
+                agriculture to mobile, combining vehicles, machinery,
+                crops and the challenges of running your own farm.
 
-        </p>
+            </p>
 
 
-        <div class="buttons">
+            <div class="buttons">
+
+                <a
+                    class="button button-primary"
+                    href="#game">
+
+                    Discover Real Farm
+
+                </a>
 
 
-            <a
-                class="button button-primary"
-                href="#game"
-                data-i18n="discoverRealFarm">
+                <a
+                    class="button button-secondary"
+                    href="#games">
 
-                Discover Real Farm
+                    Our Games
 
-            </a>
+                </a>
 
-
-            <a
-                class="button button-secondary"
-                href="#games"
-                data-i18n="ourGamesButton">
-
-                Our Games
-
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="farm-visual">
-
-        <div class="farm-circle"></div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     REAL FARM
-========================================================== -->
-
-<section
-    class="game"
-    id="game">
-
-
-    <div class="container">
-
-
-        <div
-            class="section-label"
-            data-i18n="ourGameLabel">
-
-            Our Game
+            </div>
 
         </div>
 
 
-        <h2>
-            Real Farm Simulator
-        </h2>
+        <div class="farm-visual">
+
+            <div class="farm-circle"></div>
+
+        </div>
+
+    </section>
 
 
-        <p
-            class="section-description"
-            data-i18n="realFarmDescription">
 
-            Build your farm, operate agricultural machinery,
-            manage your production and experience the life of
-            a modern farmer.
+    <!-- =========================================================
+         REAL FARM
+    ========================================================== -->
 
-        </p>
+    <section class="game" id="game">
 
-
-        <div class="game-grid">
+        <div class="container">
 
 
-            <div class="game-card">
+            <div class="section-label">
+                Our Game
+            </div>
 
 
-                <h3>
+            <h2>
+                Real Farm Simulator
+            </h2>
 
-                    <span data-i18n="farmCardTitle1">
-                        Your farm.
-                    </span>
 
-                    <br>
+            <p class="section-description">
 
-                    <span data-i18n="farmCardTitle2">
+                Build your farm, operate agricultural machinery,
+                manage your production and experience the life of
+                a modern farmer.
+
+            </p>
+
+
+            <div class="game-grid">
+
+
+                <div class="game-card">
+
+                    <h3>
+                        Your farm.<br>
                         Your way.
-                    </span>
-
-                </h3>
+                    </h3>
 
 
-                <p
-                    data-i18n="farmCardDescription">
+                    <p>
 
-                    From planting and harvesting to managing
-                    equipment and livestock, every part of the
-                    farm is connected to your decisions.
-
-                </p>
-
-            </div>
-
-
-
-            <div class="feature-grid">
-
-
-                <div class="feature">
-
-
-                    <div class="feature-icon">
-                        🚜
-                    </div>
-
-
-                    <h4
-                        data-i18n="machineryTitle">
-
-                        Machinery
-
-                    </h4>
-
-
-                    <p
-                        data-i18n="machineryDescription">
-
-                        Operate tractors and agricultural
-                        equipment.
+                        From planting and harvesting to managing
+                        equipment and livestock, every part of the
+                        farm is connected to your decisions.
 
                     </p>
 
                 </div>
 
 
+                <div class="feature-grid">
 
-                <div class="feature">
 
+                    <div class="feature">
 
-                    <div class="feature-icon">
-                        🌱
+                        <div class="feature-icon">
+                            🚜
+                        </div>
+
+                        <h4>
+                            Machinery
+                        </h4>
+
+                        <p>
+                            Operate tractors and agricultural
+                            equipment.
+                        </p>
+
                     </div>
 
 
-                    <h4
-                        data-i18n="agricultureTitle">
+                    <div class="feature">
 
-                        Agriculture
+                        <div class="feature-icon">
+                            🌱
+                        </div>
 
-                    </h4>
+                        <h4>
+                            Agriculture
+                        </h4>
 
+                        <p>
+                            Plant, grow and harvest your crops.
+                        </p>
 
-                    <p
-                        data-i18n="agricultureDescription">
-
-                        Plant, grow and harvest your crops.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="feature">
-
-
-                    <div class="feature-icon">
-                        🐄
                     </div>
 
 
-                    <h4
-                        data-i18n="livestockTitle">
+                    <div class="feature">
 
-                        Livestock
+                        <div class="feature-icon">
+                            🐄
+                        </div>
 
-                    </h4>
+                        <h4>
+                            Livestock
+                        </h4>
 
+                        <p>
+                            Take care of animals and manage
+                            production.
+                        </p>
 
-                    <p
-                        data-i18n="livestockDescription">
-
-                        Take care of animals and manage
-                        production.
-
-                    </p>
-
-                </div>
-
-
-
-                <div class="feature">
-
-
-                    <div class="feature-icon">
-                        🌾
                     </div>
 
 
-                    <h4
-                        data-i18n="managementTitle">
+                    <div class="feature">
 
-                        Farm Management
+                        <div class="feature-icon">
+                            🌾
+                        </div>
 
-                    </h4>
+                        <h4>
+                            Farm Management
+                        </h4>
 
+                        <p>
+                            Build and manage your agricultural
+                            operation.
+                        </p>
 
-                    <p
-                        data-i18n="managementDescription">
-
-                        Build and manage your agricultural
-                        operation.
-
-                    </p>
+                    </div>
 
                 </div>
-
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================================================
+    <!-- =========================================================
      OUR GAMES
 ========================================================== -->
 
-<section
-    class="our-games"
-    id="games">
-
+<section class="our-games" id="games">
 
     <div class="container">
 
-
-        <div
-            class="section-label"
-            data-i18n="siliconGamesLabel">
-
+        <div class="section-label">
             Silicon Games
-
         </div>
 
-
-        <h2
-            data-i18n="ourGamesTitle">
-
+        <h2>
             Our Games
-
         </h2>
 
-
-        <p
-            class="section-description"
-            data-i18n="ourGamesDescription">
-
+        <p class="section-description">
             Explore the games currently being developed
             and published by Silicon Games.
-
         </p>
 
 
@@ -1894,7 +1272,6 @@
 
             <div class="store-card">
 
-
                 <img
                     src="https://play-lh.googleusercontent.com/BiWobYlSleLgkpb1fR9cYuHq6xzCdAXJwRN3VFkfuD-nXZf26eOF2MXzv7cq6bd-OIzAL2_FrCsbJAkZTQdMRQ=w240-h480-rw"
                     alt="Real Farm Simulator"
@@ -1903,13 +1280,8 @@
 
                 <div class="store-content">
 
-
-                    <span
-                        class="store-label"
-                        data-i18n="androidGooglePlay">
-
+                    <span class="store-label">
                         Android · Google Play
-
                     </span>
 
 
@@ -1918,18 +1290,14 @@
                     </h3>
 
 
-                    <p
-                        data-i18n="realFarmGameDescription">
-
+                    <p>
                         Plant, harvest, raise animals and
                         manage your own farm in a realistic
                         mobile farming simulator.
-
                     </p>
 
 
                     <div class="store-actions">
-
 
                         <a
                             class="store-link play-link"
@@ -1937,10 +1305,7 @@
                             target="_blank"
                             rel="noopener noreferrer">
 
-                            <span
-                                data-i18n="googlePlay">
-                                Google Play
-                            </span>
+                            Google Play
 
                             <span class="store-link-arrow">
                                 ↗
@@ -1955,10 +1320,7 @@
                             target="_blank"
                             rel="noopener noreferrer">
 
-                            <span
-                                data-i18n="downloadApk">
-                                Download APK
-                            </span>
+                            Download APK
 
                             <span class="store-link-arrow">
                                 ↓
@@ -1975,11 +1337,10 @@
 
 
             <!-- =================================================
-                 CITY BUS
+                 CITY BUS SIMULATOR
             ================================================== -->
 
             <div class="store-card">
-
 
                 <img
                     src="https://play-lh.googleusercontent.com/4sGNqBMAdftK_eAkx-pIZmNh4DjDd3LSmcp2tSWeLZ47a2cPJJ13C0cNM2a88EFLWEGoTXRoul0M9Ecis-F1Jw=s48-rw"
@@ -1989,13 +1350,8 @@
 
                 <div class="store-content">
 
-
-                    <span
-                        class="store-label"
-                        data-i18n="androidGooglePlay">
-
+                    <span class="store-label">
                         Android · Google Play
-
                     </span>
 
 
@@ -2004,18 +1360,14 @@
                     </h3>
 
 
-                    <p
-                        data-i18n="cityBusGameDescription">
-
+                    <p>
                         Take the wheel, transport passengers
                         and experience the challenge of
                         driving a city bus.
-
                     </p>
 
 
                     <div class="store-actions">
-
 
                         <a
                             class="store-link play-link"
@@ -2023,31 +1375,10 @@
                             target="_blank"
                             rel="noopener noreferrer">
 
-                            <span
-                                data-i18n="googlePlay">
-                                Google Play
-                            </span>
+                            Google Play
 
                             <span class="store-link-arrow">
                                 ↗
-                            </span>
-
-                        </a>
-
-
-                        <a
-                            class="store-link apk-link"
-                            href="#"
-                            target="_blank"
-                            rel="noopener noreferrer">
-
-                            <span
-                                data-i18n="downloadApk">
-                                Download APK
-                            </span>
-
-                            <span class="store-link-arrow">
-                                ↓
                             </span>
 
                         </a>
@@ -2067,197 +1398,137 @@
 
 
 
-<!-- =========================================================
-     STUDIO
-========================================================== -->
+    <!-- =========================================================
+         STUDIO
+    ========================================================== -->
 
-<section
-    class="about"
-    id="studio">
+    <section class="about" id="studio">
 
-
-    <div class="container">
+        <div class="container">
 
 
-        <div
-            class="section-label"
-            data-i18n="studioLabel">
-
-            The Studio
-
-        </div>
-
-
-        <h2
-            data-i18n="studioTitle">
-
-            Built by Silicon Games.
-
-        </h2>
-
-
-        <div class="about-grid">
-
-
-            <div class="about-text">
-
-
-                <p
-                    data-i18n="studioParagraph1">
-
-                    Silicon Games is an independent game studio
-                    focused on creating interactive experiences
-                    with technology, simulation and attention
-                    to detail.
-
-                </p>
-
-
-                <p
-                    data-i18n="studioParagraph2">
-
-                    Our goal is to create games that feel alive —
-                    systems that interact with each other and
-                    give players freedom to build their own
-                    experience.
-
-                </p>
-
-
-                <p
-                    data-i18n="studioParagraph3">
-
-                    Real Farm Simulator and City Bus Simulator
-                    are part of our growing portfolio of
-                    simulation games for mobile platforms.
-
-                </p>
-
+            <div class="section-label">
+                The Studio
             </div>
 
 
-            <div class="company-card">
+            <h2>
+                Built by Silicon Games.
+            </h2>
 
 
-                <div class="company-logo">
+            <div class="about-grid">
 
-                    SILICON
-                    <span>
-                        GAMES
-                    </span>
+
+                <div class="about-text">
+
+                    <p>
+                        Silicon Games is an independent game studio
+                        focused on creating interactive experiences
+                        with technology, simulation and attention
+                        to detail.
+                    </p>
+
+
+                    <p>
+                        Our goal is to create games that feel alive —
+                        systems that interact with each other and
+                        give players freedom to build their own
+                        experience.
+                    </p>
+
+
+                    <p>
+                        Real Farm Simulator and City Bus Simulator
+                        are part of our growing portfolio of
+                        simulation games for mobile platforms.
+                    </p>
 
                 </div>
 
 
-                <p
-                    data-i18n="companyDescription">
+                <div class="company-card">
 
-                    Independent development studio creating
-                    games and interactive experiences.
+                    <div class="company-logo">
+                        SILICON <span>GAMES</span>
+                    </div>
 
+
+                    <p>
+                        Independent development studio creating
+                        games and interactive experiences.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CTA
+    ========================================================== -->
+
+    <section class="cta" id="contact">
+
+        <div class="container">
+
+            <div class="cta-box">
+
+                <div class="section-label">
+                    Silicon Games
+                </div>
+
+
+                <h2>
+                    More games are coming.
+                </h2>
+
+
+                <p>
+                    Discover our games on Google Play and follow
+                    the development of our upcoming projects.
                 </p>
 
-            </div>
 
-        </div>
+                <div class="buttons">
 
-    </div>
+                    <a
+                        class="button button-primary"
+                        href="#games">
 
-</section>
+                        Explore Our Games
 
+                    </a>
 
-
-<!-- =========================================================
-     CTA
-========================================================== -->
-
-<section
-    class="cta"
-    id="contact">
-
-
-    <div class="container">
-
-
-        <div class="cta-box">
-
-
-            <div
-                class="section-label"
-                data-i18n="ctaLabel">
-
-                Silicon Games
-
-            </div>
-
-
-            <h2
-                data-i18n="ctaTitle">
-
-                More games are coming.
-
-            </h2>
-
-
-            <p
-                data-i18n="ctaDescription">
-
-                Discover our games on Google Play and follow
-                the development of our upcoming projects.
-
-            </p>
-
-
-            <div class="buttons">
-
-
-                <a
-                    class="button button-primary"
-                    href="#games"
-                    data-i18n="exploreGames">
-
-                    Explore Our Games
-
-                </a>
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
-
+    </section>
 
 </main>
 
 
 
-<!-- =========================================================
-     FOOTER
-========================================================== -->
-
 <footer>
-
 
     <div class="footer-content">
 
 
         <div class="footer-brand">
-
-            SILICON
-            <span>
-                GAMES
-            </span>
-
+            SILICON <span>GAMES</span>
         </div>
 
 
-        <p
-            data-i18n="copyright">
-
+        <p>
             © 2026 Silicon Games. All rights reserved.
-
         </p>
 
     </div>
@@ -2265,739 +1536,5 @@
 </footer>
 
 
-
-<!-- =========================================================
-     TRANSLATION SYSTEM
-========================================================== -->
-
-<script>
-
-const translations = {
-
-
-    /* =========================================================
-       PORTUGUÊS
-    ========================================================== */
-
-    pt: {
-
-        navRealFarm:
-            "Real Farm",
-
-        navGames:
-            "Jogos",
-
-        navStudio:
-            "Estúdio",
-
-
-        heroTag:
-            "Estúdio Independente de Jogos",
-
-        heroTitle1:
-            "Farming made",
-
-        heroTitle2:
-            "real.",
-
-        heroDescription:
-            "Real Farm Simulator traz a experiência da agricultura moderna para dispositivos móveis, combinando veículos, máquinas, plantações e os desafios de administrar sua própria fazenda.",
-
-        discoverRealFarm:
-            "Conheça o Real Farm",
-
-        ourGamesButton:
-            "Nossos Jogos",
-
-
-        ourGameLabel:
-            "Nosso Jogo",
-
-        realFarmDescription:
-            "Construa sua fazenda, opere máquinas agrícolas, gerencie sua produção e experimente a vida de um agricultor moderno.",
-
-        farmCardTitle1:
-            "Sua fazenda.",
-
-        farmCardTitle2:
-            "Do seu jeito.",
-
-        farmCardDescription:
-            "Do plantio à colheita, passando pelo gerenciamento de equipamentos e animais, cada parte da fazenda está conectada às suas decisões.",
-
-
-        machineryTitle:
-            "Máquinas",
-
-        machineryDescription:
-            "Opere tratores e equipamentos agrícolas.",
-
-        agricultureTitle:
-            "Agricultura",
-
-        agricultureDescription:
-            "Plante, cultive e colha suas plantações.",
-
-        livestockTitle:
-            "Pecuária",
-
-        livestockDescription:
-            "Cuide dos animais e gerencie a produção.",
-
-        managementTitle:
-            "Gestão da Fazenda",
-
-        managementDescription:
-            "Construa e administre sua operação agrícola.",
-
-
-        siliconGamesLabel:
-            "Silicon Games",
-
-        ourGamesTitle:
-            "Nossos Jogos",
-
-        ourGamesDescription:
-            "Conheça os jogos atualmente desenvolvidos e publicados pela Silicon Games.",
-
-
-        androidGooglePlay:
-            "Android · Google Play",
-
-        googlePlay:
-            "Google Play",
-
-        downloadApk:
-            "Baixar APK",
-
-
-        realFarmGameDescription:
-            "Plante, colha, crie animais e administre sua própria fazenda em um simulador agrícola realista para dispositivos móveis.",
-
-        cityBusGameDescription:
-            "Assuma o volante, transporte passageiros e enfrente os desafios de dirigir um ônibus pela cidade.",
-
-
-        studioLabel:
-            "O Estúdio",
-
-        studioTitle:
-            "Desenvolvido pela Silicon Games.",
-
-        studioParagraph1:
-            "A Silicon Games é um estúdio independente de jogos focado na criação de experiências interativas utilizando tecnologia, simulação e atenção aos detalhes.",
-
-        studioParagraph2:
-            "Nosso objetivo é criar jogos que pareçam vivos — sistemas que interagem entre si e dão aos jogadores liberdade para criar sua própria experiência.",
-
-        studioParagraph3:
-            "Real Farm Simulator e City Bus Simulator fazem parte do nosso crescente portfólio de jogos de simulação para plataformas móveis.",
-
-        companyDescription:
-            "Estúdio independente de desenvolvimento criando jogos e experiências interativas.",
-
-
-        ctaLabel:
-            "Silicon Games",
-
-        ctaTitle:
-            "Mais jogos estão chegando.",
-
-        ctaDescription:
-            "Conheça nossos jogos no Google Play e acompanhe o desenvolvimento dos nossos próximos projetos.",
-
-        exploreGames:
-            "Explorar Nossos Jogos",
-
-
-        copyright:
-            "© 2026 Silicon Games. Todos os direitos reservados."
-    },
-
-
-
-    /* =========================================================
-       ENGLISH
-    ========================================================== */
-
-    en: {
-
-        navRealFarm:
-            "Real Farm",
-
-        navGames:
-            "Games",
-
-        navStudio:
-            "Studio",
-
-
-        heroTag:
-            "Independent Game Studio",
-
-        heroTitle1:
-            "Farming made",
-
-        heroTitle2:
-            "real.",
-
-        heroDescription:
-            "Real Farm Simulator brings the experience of modern agriculture to mobile, combining vehicles, machinery, crops and the challenges of running your own farm.",
-
-        discoverRealFarm:
-            "Discover Real Farm",
-
-        ourGamesButton:
-            "Our Games",
-
-
-        ourGameLabel:
-            "Our Game",
-
-        realFarmDescription:
-            "Build your farm, operate agricultural machinery, manage your production and experience the life of a modern farmer.",
-
-        farmCardTitle1:
-            "Your farm.",
-
-        farmCardTitle2:
-            "Your way.",
-
-        farmCardDescription:
-            "From planting and harvesting to managing equipment and livestock, every part of the farm is connected to your decisions.",
-
-
-        machineryTitle:
-            "Machinery",
-
-        machineryDescription:
-            "Operate tractors and agricultural equipment.",
-
-        agricultureTitle:
-            "Agriculture",
-
-        agricultureDescription:
-            "Plant, grow and harvest your crops.",
-
-        livestockTitle:
-            "Livestock",
-
-        livestockDescription:
-            "Take care of animals and manage production.",
-
-        managementTitle:
-            "Farm Management",
-
-        managementDescription:
-            "Build and manage your agricultural operation.",
-
-
-        siliconGamesLabel:
-            "Silicon Games",
-
-        ourGamesTitle:
-            "Our Games",
-
-        ourGamesDescription:
-            "Explore the games currently being developed and published by Silicon Games.",
-
-
-        androidGooglePlay:
-            "Android · Google Play",
-
-        googlePlay:
-            "Google Play",
-
-        downloadApk:
-            "Download APK",
-
-
-        realFarmGameDescription:
-            "Plant, harvest, raise animals and manage your own farm in a realistic mobile farming simulator.",
-
-        cityBusGameDescription:
-            "Take the wheel, transport passengers and experience the challenge of driving a city bus.",
-
-
-        studioLabel:
-            "The Studio",
-
-        studioTitle:
-            "Built by Silicon Games.",
-
-        studioParagraph1:
-            "Silicon Games is an independent game studio focused on creating interactive experiences with technology, simulation and attention to detail.",
-
-        studioParagraph2:
-            "Our goal is to create games that feel alive — systems that interact with each other and give players freedom to build their own experience.",
-
-        studioParagraph3:
-            "Real Farm Simulator and City Bus Simulator are part of our growing portfolio of simulation games for mobile platforms.",
-
-        companyDescription:
-            "Independent development studio creating games and interactive experiences.",
-
-
-        ctaLabel:
-            "Silicon Games",
-
-        ctaTitle:
-            "More games are coming.",
-
-        ctaDescription:
-            "Discover our games on Google Play and follow the development of our upcoming projects.",
-
-        exploreGames:
-            "Explore Our Games",
-
-
-        copyright:
-            "© 2026 Silicon Games. All rights reserved."
-    },
-
-
-
-    /* =========================================================
-       ESPAÑOL
-    ========================================================== */
-
-    es: {
-
-        navRealFarm:
-            "Real Farm",
-
-        navGames:
-            "Juegos",
-
-        navStudio:
-            "Estudio",
-
-
-        heroTag:
-            "Estudio Independiente de Videojuegos",
-
-        heroTitle1:
-            "Farming made",
-
-        heroTitle2:
-            "real.",
-
-        heroDescription:
-            "Real Farm Simulator lleva la experiencia de la agricultura moderna a dispositivos móviles, combinando vehículos, maquinaria, cultivos y los desafíos de administrar tu propia granja.",
-
-        discoverRealFarm:
-            "Descubre Real Farm",
-
-        ourGamesButton:
-            "Nuestros Juegos",
-
-
-        ourGameLabel:
-            "Nuestro Juego",
-
-        realFarmDescription:
-            "Construye tu granja, opera maquinaria agrícola, administra tu producción y experimenta la vida de un agricultor moderno.",
-
-        farmCardTitle1:
-            "Tu granja.",
-
-        farmCardTitle2:
-            "A tu manera.",
-
-        farmCardDescription:
-            "Desde la siembra y la cosecha hasta la gestión de equipos y animales, cada parte de la granja está conectada con tus decisiones.",
-
-
-        machineryTitle:
-            "Maquinaria",
-
-        machineryDescription:
-            "Conduce tractores y equipos agrícolas.",
-
-        agricultureTitle:
-            "Agricultura",
-
-        agricultureDescription:
-            "Planta, cultiva y cosecha tus cultivos.",
-
-        livestockTitle:
-            "Ganadería",
-
-        livestockDescription:
-            "Cuida de los animales y administra la producción.",
-
-        managementTitle:
-            "Gestión de la Granja",
-
-        managementDescription:
-            "Construye y administra tu operación agrícola.",
-
-
-        siliconGamesLabel:
-            "Silicon Games",
-
-        ourGamesTitle:
-            "Nuestros Juegos",
-
-        ourGamesDescription:
-            "Descubre los juegos desarrollados y publicados actualmente por Silicon Games.",
-
-
-        androidGooglePlay:
-            "Android · Google Play",
-
-        googlePlay:
-            "Google Play",
-
-        downloadApk:
-            "Descargar APK",
-
-
-        realFarmGameDescription:
-            "Planta, cosecha, cría animales y administra tu propia granja en un simulador agrícola realista para dispositivos móviles.",
-
-        cityBusGameDescription:
-            "Ponte al volante, transporta pasajeros y experimenta el desafío de conducir un autobús por la ciudad.",
-
-
-        studioLabel:
-            "El Estudio",
-
-        studioTitle:
-            "Creado por Silicon Games.",
-
-        studioParagraph1:
-            "Silicon Games es un estudio independiente de videojuegos enfocado en crear experiencias interactivas utilizando tecnología, simulación y atención al detalle.",
-
-        studioParagraph2:
-            "Nuestro objetivo es crear juegos que se sientan vivos — sistemas que interactúan entre sí y ofrecen a los jugadores libertad para crear su propia experiencia.",
-
-        studioParagraph3:
-            "Real Farm Simulator y City Bus Simulator forman parte de nuestro creciente catálogo de juegos de simulación para plataformas móviles.",
-
-        companyDescription:
-            "Estudio independiente de desarrollo que crea juegos y experiencias interactivas.",
-
-
-        ctaLabel:
-            "Silicon Games",
-
-        ctaTitle:
-            "Más juegos están por llegar.",
-
-        ctaDescription:
-            "Descubre nuestros juegos en Google Play y sigue el desarrollo de nuestros próximos proyectos.",
-
-        exploreGames:
-            "Explorar Nuestros Juegos",
-
-
-        copyright:
-            "© 2026 Silicon Games. Todos los derechos reservados."
-    }
-
-};
-
-
-
-/* =========================================================
-   LANGUAGE DATA
-========================================================== */
-
-const languageData = {
-
-    pt: {
-        flag: "🇧🇷",
-        short: "PT",
-        htmlLang: "pt-BR"
-    },
-
-    en: {
-        flag: "🇺🇸",
-        short: "EN",
-        htmlLang: "en"
-    },
-
-    es: {
-        flag: "🇪🇸",
-        short: "ES",
-        htmlLang: "es"
-    }
-
-};
-
-
-
-/* =========================================================
-   APPLY LANGUAGE
-========================================================== */
-
-function setLanguage(language) {
-
-    if (!translations[language]) {
-        language = "en";
-    }
-
-
-    document
-        .querySelectorAll("[data-i18n]")
-        .forEach(element => {
-
-            const key =
-                element.dataset.i18n;
-
-
-            if (
-                translations[language] &&
-                translations[language][key]
-            ) {
-
-                element.textContent =
-                    translations[language][key];
-            }
-
-        });
-
-
-    const data =
-        languageData[language];
-
-
-    document.documentElement.lang =
-        data.htmlLang;
-
-
-    document
-        .getElementById("currentFlag")
-        .textContent =
-        data.flag;
-
-
-    document
-        .getElementById("currentLanguage")
-        .textContent =
-        data.short;
-
-
-    document
-        .querySelectorAll(".language-option")
-        .forEach(button => {
-
-            button.classList.toggle(
-                "active",
-                button.dataset.language === language
-            );
-
-        });
-
-
-    localStorage.setItem(
-        "siliconGamesLanguage",
-        language
-    );
-
-
-    updateSEO(language);
-}
-
-
-
-/* =========================================================
-   SEO
-========================================================== */
-
-function updateSEO(language) {
-
-    const descriptions = {
-
-        pt:
-            "Silicon Games — desenvolvedora independente de jogos. Conheça Real Farm Simulator, City Bus Simulator e nossos próximos projetos.",
-
-        en:
-            "Silicon Games — independent game studio. Discover Real Farm Simulator, City Bus Simulator and our upcoming projects.",
-
-        es:
-            "Silicon Games — estudio independiente de videojuegos. Descubre Real Farm Simulator, City Bus Simulator y nuestros próximos proyectos."
-    };
-
-
-    document.title =
-        language === "pt"
-            ? "Silicon Games — Real Farm Simulator"
-            : language === "es"
-                ? "Silicon Games — Real Farm Simulator"
-                : "Silicon Games — Real Farm Simulator";
-
-
-    const meta =
-        document.querySelector(
-            'meta[name="description"]'
-        );
-
-
-    if (meta) {
-
-        meta.setAttribute(
-            "content",
-            descriptions[language]
-        );
-
-    }
-
-}
-
-
-
-/* =========================================================
-   LANGUAGE MENU
-========================================================== */
-
-const languageSelector =
-    document.getElementById(
-        "languageSelector"
-    );
-
-
-const languageButton =
-    document.getElementById(
-        "languageButton"
-    );
-
-
-languageButton.addEventListener(
-    "click",
-    function(event) {
-
-        event.stopPropagation();
-
-        languageSelector.classList.toggle(
-            "open"
-        );
-
-    }
-);
-
-
-
-document
-    .querySelectorAll(".language-option")
-    .forEach(button => {
-
-        button.addEventListener(
-            "click",
-            function() {
-
-                setLanguage(
-                    this.dataset.language
-                );
-
-                languageSelector.classList.remove(
-                    "open"
-                );
-
-            }
-        );
-
-    });
-
-
-
-document.addEventListener(
-    "click",
-    function(event) {
-
-        if (
-            !languageSelector.contains(event.target)
-        ) {
-
-            languageSelector.classList.remove(
-                "open"
-            );
-
-        }
-
-    }
-);
-
-
-
-/* =========================================================
-   AUTOMATIC LANGUAGE DETECTION
-========================================================== */
-
-function detectLanguage() {
-
-    const savedLanguage =
-        localStorage.getItem(
-            "siliconGamesLanguage"
-        );
-
-
-    if (
-        savedLanguage &&
-        translations[savedLanguage]
-    ) {
-
-        return savedLanguage;
-
-    }
-
-
-    const browserLanguages =
-        navigator.languages &&
-        navigator.languages.length
-            ? navigator.languages
-            : [navigator.language];
-
-
-    for (
-        const browserLanguage
-        of browserLanguages
-    ) {
-
-        if (!browserLanguage) {
-            continue;
-        }
-
-
-        const language =
-            browserLanguage
-                .toLowerCase()
-                .split("-")[0];
-
-
-        if (
-            translations[language]
-        ) {
-
-            return language;
-
-        }
-
-    }
-
-
-    /*
-       Idioma padrão caso o navegador
-       não seja PT, EN ou ES.
-    */
-
-    return "en";
-}
-
-
-
-/* =========================================================
-   INITIALIZE
-========================================================== */
-
-setLanguage(
-    detectLanguage()
-);
-
-</script>
-
-
 </body>
-
 </html>
