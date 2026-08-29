@@ -861,6 +861,89 @@
             font-size: 12px;
         }
 
+
+        /* =========================================================
+           CONTENT / SEO SECTIONS
+        ========================================================= */
+
+        .content-section {
+            background: var(--dark);
+        }
+
+        .content-grid {
+            margin-top: 45px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .content-card {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            background: rgba(255,255,255,0.025);
+        }
+
+        .content-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .content-card p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .content-card ul {
+            margin-top: 12px;
+            padding-left: 20px;
+            color: var(--muted);
+        }
+
+        .content-card li {
+            margin-bottom: 8px;
+        }
+
+        .faq-list {
+            margin-top: 45px;
+            display: grid;
+            gap: 14px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px 26px;
+            background: rgba(255,255,255,0.025);
+        }
+
+        .faq-item h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .faq-item p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .notice {
+            margin-top: 35px;
+            padding: 20px 24px;
+            border-left: 3px solid var(--green);
+            background: rgba(88,168,61,0.07);
+            border-radius: 8px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 800px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* =========================================================
            MOBILE
         ========================================================= */
@@ -998,6 +1081,10 @@
                 Studio
             </a>
 
+            <a href="#faq">
+                FAQ
+            </a>
+
         </nav>
 
     </div>
@@ -1059,34 +1146,7 @@
         </div>
 
     </section>
-
-
-    <!-- =========================================================
-         GOOGLE ADSENSE — VERTICAL DISPLAY
-    ========================================================== -->
-
-    <div class="ad-container">
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4460160277716086"
-             crossorigin="anonymous"></script>
-
-        <!-- Vertical Display -->
-
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4460160277716086"
-             data-ad-slot="7675127800"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-
-    </div>
-
-
-    <!-- =========================================================
+<!-- =========================================================
          REAL FARM
     ========================================================== -->
 
@@ -1207,34 +1267,7 @@
         </div>
 
     </section>
-
-
-    <!-- =========================================================
-         GOOGLE ADSENSE — VERTICAL DISPLAY
-    ========================================================== -->
-
-    <div class="ad-container">
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4460160277716086"
-             crossorigin="anonymous"></script>
-
-        <!-- Vertical Display -->
-
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4460160277716086"
-             data-ad-slot="7675127800"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-
-    </div>
-
-
-    <!-- =========================================================
+<!-- =========================================================
          OUR GAMES
     ========================================================== -->
 
@@ -1373,34 +1406,7 @@
         </div>
 
     </section>
-
-
-    <!-- =========================================================
-         GOOGLE ADSENSE — VERTICAL DISPLAY
-    ========================================================== -->
-
-    <div class="ad-container">
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4460160277716086"
-             crossorigin="anonymous"></script>
-
-        <!-- Vertical Display -->
-
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4460160277716086"
-             data-ad-slot="7675127800"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-
-    </div>
-
-
-    <!-- =========================================================
+<!-- =========================================================
          STUDIO
     ========================================================== -->
 
@@ -1463,6 +1469,74 @@
 
 
     <!-- =========================================================
+         FAQ
+    ========================================================== -->
+
+    <section class="content-section" id="faq">
+        <div class="container">
+
+            <div class="section-label">Frequently Asked Questions</div>
+
+            <h2>Real Farm Simulator FAQ</h2>
+
+            <p class="section-description">
+                Answers to common questions about Real Farm Simulator,
+                development and availability.
+            </p>
+
+            <div class="faq-list">
+
+                <article class="faq-item">
+                    <h3>What is Real Farm Simulator?</h3>
+                    <p>
+                        Real Farm Simulator is a mobile farming simulation
+                        developed by Silicon Games. It combines agriculture,
+                        machinery, livestock and farm management.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Where can I play the game?</h3>
+                    <p>
+                        The game is being distributed for Android. The current
+                        availability and version can be checked through the
+                        official Google Play listing on this website.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Is the game still being developed?</h3>
+                    <p>
+                        Yes. Real Farm Simulator is an independently developed
+                        project, and its systems and content can continue to
+                        evolve through future updates.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>What can I do in the game?</h3>
+                    <p>
+                        Players can work with crops, agricultural machinery,
+                        livestock and farm management systems while developing
+                        their own farming operation.
+                    </p>
+                </article>
+
+                <article class="faq-item">
+                    <h3>Will new features be added?</h3>
+                    <p>
+                        Future updates may introduce improvements, new systems
+                        and additional content as development progresses.
+                    </p>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================================================
          CTA
     ========================================================== -->
 
@@ -1513,7 +1587,7 @@
         </div>
 
         <p>
-            © 2026 Silicon Games. All rights reserved.
+            © 2026 Silicon Games. Independent game development studio.
         </p>
 
     </div>
