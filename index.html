@@ -1598,13 +1598,11 @@
 </footer>
 
     <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  // 1. CORREÇÃO: Imports completos e versão estável (10.8.0)
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+  import { getDatabase, ref, get, set, runTransaction } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
     apiKey: "AIzaSyBx7xBQLRe2BBaKUqTkEMw5fcwARUIzMtw",
     authDomain: "sgames-bfefa.firebaseapp.com",
@@ -1616,9 +1614,12 @@
     measurementId: "G-LDXYDG9ZCK"
   };
 
-  // Initialize Firebase
+  // Inicializa o Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+  
+  // 2. CORREÇÃO: Inicializa o banco de dados (estava faltando esta linha)
+  const db = getDatabase(app);
 
   // Função para converter texto em hash SHA-256 (Hex)
   async function sha256(message) {
@@ -1646,7 +1647,7 @@
     const today = new Date().toISOString().split('T')[0]; // Formato: YYYY-MM-DD
 
     try {
-      // Sempre busca o total atual para exibir na tela
+      // Busca o total atual para exibir na tela
       const totalVisitsRef = ref(db, 'visits/total');
       const totalSnapshot = await get(totalVisitsRef);
       const currentTotal = totalSnapshot.val() || 0;
@@ -1672,7 +1673,7 @@
           return (current || 0) + 1;
         });
         
-        // Marca como visitado hoje (as regras do Firebase garantem que isso só funciona 1x por chave)
+        // Marca como visitado hoje
         await set(ipVisitRef, true);
         
         // Atualiza a tela com o novo valor
