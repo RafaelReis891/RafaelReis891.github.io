@@ -13,7 +13,6 @@
     <meta name="theme-color" content="#101812">
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -24,14 +23,11 @@
             --green: #58a83d;
             --green-light: #79c957;
             --green-dark: #183d20;
-
             --dark: #0b100d;
             --dark-2: #101812;
             --dark-3: #162019;
-
             --text: #f1f5f1;
             --muted: #a9b4aa;
-
             --border: rgba(255,255,255,0.08);
         }
 
@@ -54,31 +50,23 @@
         /* =========================================================
            HEADER
         ========================================================= */
-
         header {
             position: fixed;
             top: 0;
             left: 0;
-
             width: 100%;
             z-index: 1000;
-
             background: rgba(11, 16, 13, 0.82);
-
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-
             border-bottom: 1px solid var(--border);
         }
 
         .nav {
             max-width: 1150px;
             margin: auto;
-
             min-height: 72px;
-
             padding: 0 24px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -87,7 +75,6 @@
         .brand {
             display: flex;
             align-items: center;
-
             transition: 0.2s;
         }
 
@@ -98,10 +85,8 @@
         .brand-logo {
             width: 170px;
             height: 48px;
-
             object-fit: contain;
             object-position: left center;
-
             display: block;
         }
 
@@ -112,9 +97,7 @@
 
         nav a {
             color: var(--muted);
-
             font-size: 14px;
-
             transition: 0.2s;
         }
 
@@ -125,106 +108,58 @@
         /* =========================================================
            HERO
         ========================================================= */
-
         .hero {
             min-height: 720px;
-
             display: flex;
             align-items: center;
-
             position: relative;
             overflow: hidden;
-
             background:
-                radial-gradient(
-                    circle at 80% 35%,
-                    rgba(88,168,61,0.18),
-                    transparent 35%
-                ),
-                radial-gradient(
-                    circle at 20% 80%,
-                    rgba(37,90,44,0.18),
-                    transparent 35%
-                ),
+                radial-gradient(circle at 80% 35%, rgba(88,168,61,0.18), transparent 35%),
+                radial-gradient(circle at 20% 80%, rgba(37,90,44,0.18), transparent 35%),
                 var(--dark);
         }
 
         .hero::before {
             content: "";
-
             position: absolute;
             inset: 0;
-
             background-image:
-                linear-gradient(
-                    rgba(255,255,255,0.018) 1px,
-                    transparent 1px
-                ),
-                linear-gradient(
-                    90deg,
-                    rgba(255,255,255,0.018) 1px,
-                    transparent 1px
-                );
-
+                linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
             background-size: 60px 60px;
-
-            mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent
-            );
-
-            -webkit-mask-image: linear-gradient(
-                to bottom,
-                black,
-                transparent
-            );
+            mask-image: linear-gradient(to bottom, black, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, black, transparent);
         }
 
         .hero-content {
             width: 100%;
             max-width: 1150px;
-
             margin: auto;
-
             padding: 130px 24px 80px;
-
             position: relative;
             z-index: 2;
         }
 
         .tag {
             display: inline-flex;
-
             padding: 7px 13px;
-
             border: 1px solid rgba(121,201,87,0.25);
-
             border-radius: 30px;
-
             color: var(--green-light);
-
             background: rgba(88,168,61,0.08);
-
             font-size: 12px;
             font-weight: bold;
-
             letter-spacing: 1.4px;
-
             text-transform: uppercase;
-
             margin-bottom: 24px;
         }
 
         h1 {
             max-width: 800px;
-
             font-size: clamp(48px, 7vw, 82px);
-
             line-height: 0.98;
-
             letter-spacing: -3px;
-
             margin-bottom: 26px;
         }
 
@@ -234,62 +169,46 @@
 
         .hero-description {
             max-width: 650px;
-
             color: var(--muted);
-
             font-size: 18px;
-
             line-height: 1.7;
-
             margin-bottom: 34px;
         }
 
         .buttons {
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 14px;
         }
 
         .button {
             display: inline-flex;
-
             align-items: center;
             justify-content: center;
-
             min-height: 48px;
-
             padding: 0 22px;
-
             border-radius: 9px;
-
             font-weight: bold;
             font-size: 14px;
-
             transition: 0.2s;
+            cursor: pointer;
         }
 
         .button-primary {
             background: var(--green);
-
             color: #071007;
-
-            box-shadow:
-                0 10px 30px rgba(88,168,61,0.22);
+            box-shadow: 0 10px 30px rgba(88,168,61,0.22);
+            border: none;
         }
 
         .button-primary:hover {
             background: var(--green-light);
-
             transform: translateY(-2px);
         }
 
         .button-secondary {
             border: 1px solid var(--border);
-
             background: rgba(255,255,255,0.03);
-
             color: var(--text);
         }
 
@@ -299,26 +218,19 @@
 
         .farm-visual {
             position: absolute;
-
             right: -80px;
             bottom: -100px;
-
             width: 500px;
             height: 500px;
-
             opacity: 0.8;
-
             transform: rotate(-8deg);
         }
 
         .farm-circle {
             width: 100%;
             height: 100%;
-
             border-radius: 50%;
-
             border: 1px solid rgba(88,168,61,0.12);
-
             box-shadow:
                 0 0 0 50px rgba(88,168,61,0.02),
                 0 0 0 100px rgba(88,168,61,0.02),
@@ -326,174 +238,110 @@
         }
 
         /* =========================================================
-           ADSENSE
+           SECTIONS GERAL
         ========================================================= */
-
-        .ad-container {
-            width: 100%;
-            max-width: 1150px;
-
-            margin: 0 auto;
-
-            padding: 35px 24px;
-
-            text-align: center;
-        }
-
-        /* =========================================================
-           SECTIONS
-        ========================================================= */
-
         section {
             padding: 100px 24px;
         }
 
         .container {
             max-width: 1150px;
-
             margin: auto;
         }
 
         .section-label {
             color: var(--green-light);
-
             font-size: 12px;
             font-weight: bold;
-
             letter-spacing: 2px;
-
             text-transform: uppercase;
-
             margin-bottom: 14px;
         }
 
         h2 {
             font-size: clamp(34px, 5vw, 52px);
-
             line-height: 1.05;
-
             letter-spacing: -1.5px;
-
             margin-bottom: 20px;
         }
 
         .section-description {
             color: var(--muted);
-
             max-width: 680px;
-
             font-size: 17px;
         }
 
         /* =========================================================
-           REAL FARM
+           REAL FARM & FEATURES
         ========================================================= */
-
         .game {
             background: var(--dark-2);
         }
 
         .game-grid {
             margin-top: 55px;
-
             display: grid;
-
             grid-template-columns: 1.2fr 0.8fr;
-
             gap: 24px;
         }
 
         .game-card {
             min-height: 350px;
-
             border-radius: 18px;
-
             border: 1px solid var(--border);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(88,168,61,0.14),
-                    rgba(255,255,255,0.025)
-                );
-
+            background: linear-gradient(145deg, rgba(88,168,61,0.14), rgba(255,255,255,0.025));
             padding: 38px;
-
             display: flex;
-
             flex-direction: column;
-
             justify-content: flex-end;
-
             overflow: hidden;
-
             position: relative;
         }
 
         .game-card::before {
             content: "REAL FARM";
-
             position: absolute;
-
             top: 30px;
             right: -30px;
-
             font-size: 70px;
-
             font-weight: 900;
-
             color: rgba(255,255,255,0.025);
-
             transform: rotate(-10deg);
         }
 
         .game-card h3 {
             font-size: 32px;
-
             margin-bottom: 12px;
         }
 
         .game-card p {
             color: var(--muted);
-
             max-width: 600px;
         }
 
         .feature-grid {
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 14px;
         }
 
         .feature {
             border: 1px solid var(--border);
-
             border-radius: 14px;
-
             padding: 24px;
-
             background: rgba(255,255,255,0.025);
         }
 
         .feature-icon {
             width: 40px;
             height: 40px;
-
             display: flex;
-
             align-items: center;
             justify-content: center;
-
             border-radius: 10px;
-
             background: rgba(88,168,61,0.12);
-
             color: var(--green-light);
-
             margin-bottom: 15px;
-
             font-size: 18px;
         }
 
@@ -503,225 +351,130 @@
 
         .feature p {
             color: var(--muted);
-
             font-size: 13px;
         }
 
         /* =========================================================
            OUR GAMES
         ========================================================= */
-
         .our-games {
             background: var(--dark);
         }
 
         .games-list {
             margin-top: 45px;
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 20px;
         }
 
         .store-card {
             display: flex;
-
             align-items: center;
-
             gap: 22px;
-
             padding: 22px;
-
             min-height: 150px;
-
             border-radius: 18px;
-
             border: 1px solid var(--border);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.045),
-                    rgba(255,255,255,0.015)
-                );
-
+            background: linear-gradient(145deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
             position: relative;
-
             overflow: hidden;
-
-            transition:
-                transform 0.25s ease,
-                border-color 0.25s ease,
-                background 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        .store-card::after {
-            content: "";
-
-            position: absolute;
-
-            width: 180px;
-            height: 180px;
-
-            right: -100px;
-            top: -100px;
-
-            border-radius: 50%;
-
-            background: rgba(88,168,61,0.08);
-
-            pointer-events: none;
+            transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
         }
 
         .store-card:hover {
             transform: translateY(-5px);
-
             border-color: rgba(121,201,87,0.35);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(88,168,61,0.10),
-                    rgba(255,255,255,0.025)
-                );
-
-            box-shadow:
-                0 18px 45px rgba(0,0,0,0.25);
+            background: linear-gradient(145deg, rgba(88,168,61,0.10), rgba(255,255,255,0.025));
+            box-shadow: 0 18px 45px rgba(0,0,0,0.25);
         }
 
         .store-icon {
             width: 92px;
             height: 92px;
-
             flex: 0 0 92px;
-
             border-radius: 20px;
-
             object-fit: cover;
-
-            box-shadow:
-                0 10px 30px rgba(0,0,0,0.35);
-
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
             border: 1px solid rgba(255,255,255,0.08);
         }
 
         .store-content {
             position: relative;
-
             z-index: 2;
-
             min-width: 0;
         }
 
         .store-label {
             display: block;
-
             color: var(--green-light);
-
             font-size: 10px;
-
             font-weight: bold;
-
             letter-spacing: 1.5px;
-
             text-transform: uppercase;
-
             margin-bottom: 5px;
         }
 
         .store-content h3 {
             font-size: 21px;
-
             line-height: 1.2;
-
             margin-bottom: 7px;
         }
 
         .store-content p {
             color: var(--muted);
-
             font-size: 13px;
-
             line-height: 1.5;
         }
 
         .store-actions {
             display: flex;
-
             align-items: center;
-
             flex-wrap: wrap;
-
             gap: 8px;
-
             margin-top: 12px;
         }
 
         .store-link {
             display: inline-flex;
-
             align-items: center;
             justify-content: center;
-
             min-height: 32px;
-
             padding: 0 11px;
-
             border-radius: 7px;
-
             font-size: 11px;
-
             font-weight: bold;
-
-            transition:
-                background 0.2s ease,
-                border-color 0.2s ease,
-                color 0.2s ease,
-                transform 0.2s ease;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
         }
 
         .play-link {
             color: var(--green-light);
-
             background: rgba(88,168,61,0.10);
-
             border: 1px solid rgba(121,201,87,0.18);
         }
 
         .play-link:hover {
             background: rgba(88,168,61,0.18);
-
             border-color: rgba(121,201,87,0.35);
-
             transform: translateY(-1px);
         }
 
         .apk-link {
             color: var(--text);
-
             background: rgba(255,255,255,0.035);
-
             border: 1px solid var(--border);
         }
 
         .apk-link:hover {
             color: var(--green-light);
-
             background: rgba(255,255,255,0.07);
-
             border-color: rgba(121,201,87,0.25);
-
             transform: translateY(-1px);
         }
 
         .store-link-arrow {
             margin-left: 5px;
-
             font-size: 12px;
-
             transition: 0.2s;
         }
 
@@ -732,51 +485,34 @@
         /* =========================================================
            ABOUT
         ========================================================= */
-
         .about {
             background: var(--dark-2);
         }
 
         .about-grid {
             margin-top: 55px;
-
             display: grid;
-
             grid-template-columns: 1fr 1fr;
-
             gap: 70px;
-
             align-items: center;
         }
 
         .about-text p {
             color: var(--muted);
-
             margin-bottom: 18px;
-
             font-size: 16px;
         }
 
         .company-card {
             padding: 40px;
-
             border-radius: 18px;
-
             border: 1px solid var(--border);
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.05),
-                    rgba(255,255,255,0.015)
-                );
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
         }
 
         .company-logo {
             font-size: 30px;
-
             font-weight: 900;
-
             margin-bottom: 20px;
         }
 
@@ -791,16 +527,9 @@
         /* =========================================================
            CTA
         ========================================================= */
-
         .cta {
             padding: 80px 24px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #183d20,
-                    #101812
-                );
+            background: linear-gradient(135deg, #183d20, #101812);
         }
 
         .cta-box {
@@ -809,303 +538,20 @@
 
         .cta h2 {
             max-width: 700px;
-
             margin: 0 auto 18px;
         }
 
         .cta p {
             color: #b8c5ba;
-
             max-width: 600px;
-
             margin: 0 auto 30px;
         }
 
-
         /* =========================================================
-   CONTACT SECTION - NOVO LAYOUT
-========================================================= */
-
-.contact-section {
-    background: var(--dark-2);
-    padding: 100px 24px;
-}
-
-.contact-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-card {
-    margin-top: 50px;
-    background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 45px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}
-
-.contact-field {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.contact-field label {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text);
-    letter-spacing: 0.3px;
-}
-
-.contact-field input,
-.contact-field select,
-.contact-field textarea {
-    width: 100%;
-    padding: 16px 18px;
-    background: rgba(11, 16, 13, 0.6);
-    border: 1.5px solid rgba(255,255,255,0.1);
-    border-radius: 12px;
-    color: var(--text);
-    font-size: 15px;
-    font-family: inherit;
-    transition: all 0.25s ease;
-    outline: none;
-}
-
-.contact-field input::placeholder,
-.contact-field textarea::placeholder {
-    color: var(--muted);
-    opacity: 0.7;
-}
-
-.contact-field input:hover,
-.contact-field select:hover,
-.contact-field textarea:hover {
-    border-color: rgba(121,201,87,0.3);
-    background: rgba(11, 16, 13, 0.8);
-}
-
-.contact-field input:focus,
-.contact-field select:focus,
-.contact-field textarea:focus {
-    border-color: var(--green);
-    background: rgba(11, 16, 13, 0.9);
-    box-shadow: 0 0 0 4px rgba(88,168,61,0.15);
-}
-
-.contact-field select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23a9b4aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 16px center;
-    padding-right: 50px;
-}
-
-.contact-field select option {
-    background: var(--dark-2);
-    color: var(--text);
-    padding: 12px;
-}
-
-.contact-field textarea {
-    min-height: 180px;
-    resize: vertical;
-    line-height: 1.6;
-}
-
-.contact-hint {
-    font-size: 13px;
-    color: var(--muted);
-    margin-top: 6px;
-    line-height: 1.5;
-}
-
-.contact-honeypot {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    left: -9999px;
-}
-
-.contact-submit {
-    margin-top: 10px;
-    padding: 18px 32px;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-submit:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 35px rgba(88,168,61,0.35);
-}
-
-.contact-submit:active:not(:disabled) {
-    transform: translateY(0);
-}
-
-.contact-submit:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-}
-
-.contact-status {
-    margin-top: 20px;
-    padding: 16px 20px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-}
-
-.contact-status.success {
-    background: rgba(88,168,61,0.15);
-    border: 1px solid rgba(88,168,61,0.3);
-    color: var(--green-light);
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.contact-status.error {
-    background: rgba(220,38,38,0.15);
-    border: 1px solid rgba(220,38,38,0.3);
-    color: #fca5a5;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsivo */
-@media (max-width: 640px) {
-    .contact-card {
-        padding: 30px 24px;
-    }
-    
-    .contact-field input,
-    .contact-field select,
-    .contact-field textarea {
-        padding: 14px 16px;
-        font-size: 16px; /* Evita zoom no iOS */
-    }
-    
-    .contact-submit {
-        width: 100%;
-    }
-}
-
-/* Animação suave para o status */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.contact-status.show {
-    animation: slideIn 0.3s ease forwards;
-}
-
-        /* =========================================================
-           FOOTER
+           CONTENT / FAQ
         ========================================================= */
-
-        footer {
-            border-top: 1px solid var(--border);
-
-            background: #080c09;
-
-            padding: 30px 24px;
-        }
-
-        .footer-content {
-            max-width: 1150px;
-
-            margin: auto;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: space-between;
-
-            gap: 20px;
-        }
-
-        .footer-brand {
-            font-weight: bold;
-        }
-
-        .footer-brand span {
-            color: var(--green-light);
-        }
-
-        footer p {
-            color: #6f7a71;
-
-            font-size: 12px;
-        }
-
-
-        /* =========================================================
-           CONTENT / SEO SECTIONS
-        ========================================================= */
-
         .content-section {
             background: var(--dark);
-        }
-
-        .content-grid {
-            margin-top: 45px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .content-card {
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 30px;
-            background: rgba(255,255,255,0.025);
-        }
-
-        .content-card h3 {
-            font-size: 22px;
-            margin-bottom: 12px;
-        }
-
-        .content-card p {
-            color: var(--muted);
-            font-size: 15px;
-            line-height: 1.75;
-        }
-
-        .content-card ul {
-            margin-top: 12px;
-            padding-left: 20px;
-            color: var(--muted);
-        }
-
-        .content-card li {
-            margin-bottom: 8px;
         }
 
         .faq-list {
@@ -1132,794 +578,458 @@
             line-height: 1.7;
         }
 
-        .notice {
-            margin-top: 35px;
-            padding: 20px 24px;
-            border-left: 3px solid var(--green);
-            background: rgba(88,168,61,0.07);
-            border-radius: 8px;
-            color: var(--muted);
+        /* =========================================================
+           CONTACT SECTION (CORRIGIDO E MELHORADO)
+        ========================================================= */
+        .contact-section {
+            background: var(--dark-2);
+            padding: 100px 24px;
         }
 
-        @media (max-width: 800px) {
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-card {
+            margin-top: 50px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .contact-field {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-field label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: 0.3px;
+        }
+
+        .contact-field input,
+        .contact-field select,
+        .contact-field textarea {
+            width: 100%;
+            padding: 16px 18px;
+            background: rgba(11, 16, 13, 0.6);
+            border: 1.5px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            color: var(--text);
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.25s ease;
+            outline: none;
+        }
+
+        .contact-field input::placeholder,
+        .contact-field textarea::placeholder {
+            color: var(--muted);
+            opacity: 0.7;
+        }
+
+        .contact-field input:hover,
+        .contact-field select:hover,
+        .contact-field textarea:hover {
+            border-color: rgba(121,201,87,0.3);
+            background: rgba(11, 16, 13, 0.8);
+        }
+
+        .contact-field input:focus,
+        .contact-field select:focus,
+        .contact-field textarea:focus {
+            border-color: var(--green);
+            background: rgba(11, 16, 13, 0.9);
+            box-shadow: 0 0 0 4px rgba(88,168,61,0.15);
+        }
+
+        .contact-field select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23a9b4aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+            padding-right: 50px;
+        }
+
+        .contact-field select option {
+            background: var(--dark-2);
+            color: var(--text);
+        }
+
+        .contact-field textarea {
+            min-height: 180px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .contact-hint {
+            font-size: 13px;
+            color: var(--muted);
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        .contact-honeypot {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            left: -9999px;
+        }
+
+        .contact-submit {
+            margin-top: 10px;
+            padding: 18px 32px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-submit:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(88,168,61,0.35);
+        }
+
+        .contact-submit:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .contact-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .contact-status {
+            margin-top: 20px;
+            padding: 16px 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            display: none; /* Oculto por padrão */
+        }
+
+        .contact-status.show {
+            display: block;
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        .contact-status.success {
+            background: rgba(88,168,61,0.15);
+            border: 1px solid rgba(88,168,61,0.3);
+            color: var(--green-light);
+        }
+
+        .contact-status.error {
+            background: rgba(220,38,38,0.15);
+            border: 1px solid rgba(220,38,38,0.3);
+            color: #fca5a5;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+        footer {
+            border-top: 1px solid var(--border);
+            background: #080c09;
+            padding: 30px 24px;
+        }
+
+        .footer-content {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            font-weight: bold;
+        }
+
+        .footer-brand span {
+            color: var(--green-light);
+        }
+
+        footer p {
+            color: #6f7a71;
+            font-size: 12px;
         }
 
         /* =========================================================
            MOBILE
         ========================================================= */
-
         @media (max-width: 800px) {
-
-            nav {
-                display: none;
-            }
-
-            .hero {
-                min-height: 680px;
-            }
-
-            .hero-content {
-                padding-top: 120px;
-            }
-
-            .farm-visual {
-                right: -250px;
-                bottom: -80px;
-
-                width: 400px;
-                height: 400px;
-
-                opacity: 0.4;
-            }
-
-            .game-grid,
-            .about-grid,
-            .games-list {
-                grid-template-columns: 1fr;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .about-grid {
-                gap: 35px;
-            }
-
-            h1 {
-                letter-spacing: -2px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-
-                text-align: center;
-            }
+            nav { display: none; }
+            .hero { min-height: 680px; }
+            .hero-content { padding-top: 120px; }
+            .farm-visual { right: -250px; bottom: -80px; width: 400px; height: 400px; opacity: 0.4; }
+            .game-grid, .about-grid, .games-list { grid-template-columns: 1fr; }
+            .feature-grid { grid-template-columns: 1fr 1fr; }
+            .about-grid { gap: 35px; }
+            h1 { letter-spacing: -2px; }
+            .footer-content { flex-direction: column; text-align: center; }
         }
 
-        @media (max-width: 480px) {
-
-            section {
-                padding: 75px 20px;
-            }
-
-            .nav {
-                padding: 0 20px;
-            }
-
-            .brand-logo {
-                width: 145px;
-                height: 44px;
-            }
-
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .game-card {
-                padding: 28px;
-            }
-
-            .company-card {
-                padding: 28px;
-            }
-
-            .store-card {
-                padding: 18px;
-
-                gap: 16px;
-            }
-
-            .store-icon {
-                width: 72px;
-                height: 72px;
-
-                flex-basis: 72px;
-
-                border-radius: 16px;
-            }
-
-            .store-content h3 {
-                font-size: 18px;
-            }
-
-            .store-content p {
-                font-size: 12px;
-            }
-
-            .ad-container {
-                padding: 25px 15px;
-            }
+        @media (max-width: 640px) {
+            section { padding: 75px 20px; }
+            .nav { padding: 0 20px; }
+            .brand-logo { width: 145px; height: 44px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .game-card, .company-card { padding: 28px; }
+            .store-card { padding: 18px; gap: 16px; }
+            .store-icon { width: 72px; height: 72px; flex-basis: 72px; border-radius: 16px; }
+            .store-content h3 { font-size: 18px; }
+            .store-content p { font-size: 12px; }
+            
+            /* Contact Mobile */
+            .contact-card { padding: 30px 24px; }
+            .contact-field input, .contact-field select, .contact-field textarea { padding: 14px 16px; font-size: 16px; }
+            .contact-submit { width: 100%; }
         }
-
     </style>
 </head>
 <body>
+
 <header>
     <div class="nav">
-
         <a href="#" class="brand">
-
-            <img
-                src="logo.png"
-                alt="Silicon Games"
-                class="brand-logo">
-
+            <img src="logo.png" alt="Silicon Games" class="brand-logo">
         </a>
-
         <nav>
-
-            <a href="#game">
-                Real Farm
-            </a>
-
-            <a href="#games">
-                Games
-            </a>
-
-            <a href="#studio">
-                Studio
-            </a>
-
-            <a href="#faq">
-                FAQ
-            </a>
-
+            <a href="#game">Real Farm</a>
+            <a href="#games">Games</a>
+            <a href="#studio">Studio</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact">Fale Conosco</a>
-
         </nav>
-
     </div>
-
 </header>
 
 <main>
-    <!-- =========================================================
-         HERO
-    ========================================================== -->
-
+    <!-- HERO -->
     <section class="hero">
-
         <div class="hero-content">
-
-            <div class="tag">
-                Independent Game Studio
-            </div>
-
-            <h1>
-                Farming made<br>
-                <span>real.</span>
-            </h1>
-
+            <div class="tag">Independent Game Studio</div>
+            <h1>Farming made<br><span>real.</span></h1>
             <p class="hero-description">
-
-                Real Farm Simulator brings the experience of modern
-                agriculture to mobile, combining vehicles, machinery,
-                crops and the challenges of running your own farm.
-
+                Real Farm Simulator brings the experience of modern agriculture to mobile, combining vehicles, machinery, crops and the challenges of running your own farm.
             </p>
-
             <div class="buttons">
-
-                <a
-                    class="button button-primary"
-                    href="#game">
-
-                    Discover Real Farm
-
-                </a>
-
-                <a
-                    class="button button-secondary"
-                    href="#games">
-
-                    Our Games
-
-                </a>
-
+                <a class="button button-primary" href="#game">Discover Real Farm</a>
+                <a class="button button-secondary" href="#games">Our Games</a>
             </div>
-
         </div>
-
         <div class="farm-visual">
-
             <div class="farm-circle"></div>
-
         </div>
-
     </section>
-<!-- =========================================================
-         REAL FARM
-    ========================================================== -->
 
+    <!-- REAL FARM -->
     <section class="game" id="game">
-
         <div class="container">
-
-            <div class="section-label">
-                Our Game
-            </div>
-
-            <h2>
-                Real Farm Simulator
-            </h2>
-
-            <p class="section-description">
-
-                Build your farm, operate agricultural machinery,
-                manage your production and experience the life of
-                a modern farmer.
-
-            </p>
-
+            <div class="section-label">Our Game</div>
+            <h2>Real Farm Simulator</h2>
+            <p class="section-description">Build your farm, operate agricultural machinery, manage your production and experience the life of a modern farmer.</p>
             <div class="game-grid">
-
                 <div class="game-card">
-
-                    <h3>
-                        Your farm.<br>
-                        Your way.
-                    </h3>
-
-                    <p>
-                        From planting and harvesting to managing
-                        equipment and livestock, every part of the
-                        farm is connected to your decisions.
-                    </p>
-
+                    <h3>Your farm.<br>Your way.</h3>
+                    <p>From planting and harvesting to managing equipment and livestock, every part of the farm is connected to your decisions.</p>
                 </div>
-
-
                 <div class="feature-grid">
-
                     <div class="feature">
-
-                        <div class="feature-icon">
-                            🚜
-                        </div>
-
-                        <h4>
-                            Machinery
-                        </h4>
-
-                        <p>
-                            Operate tractors and agricultural
-                            equipment.
-                        </p>
-
+                        <div class="feature-icon">🚜</div>
+                        <h4>Machinery</h4>
+                        <p>Operate tractors and agricultural equipment.</p>
                     </div>
-
-
                     <div class="feature">
-
-                        <div class="feature-icon">
-                            🌱
-                        </div>
-
-                        <h4>
-                            Agriculture
-                        </h4>
-
-                        <p>
-                            Plant, grow and harvest your crops.
-                        </p>
-
+                        <div class="feature-icon">🌱</div>
+                        <h4>Agriculture</h4>
+                        <p>Plant, grow and harvest your crops.</p>
                     </div>
-
-
                     <div class="feature">
-
-                        <div class="feature-icon">
-                            🐄
-                        </div>
-
-                        <h4>
-                            Livestock
-                        </h4>
-
-                        <p>
-                            Take care of animals and manage
-                            production.
-                        </p>
-
+                        <div class="feature-icon">🐄</div>
+                        <h4>Livestock</h4>
+                        <p>Take care of animals and manage production.</p>
                     </div>
-
-
                     <div class="feature">
-
-                        <div class="feature-icon">
-                            🌾
-                        </div>
-
-                        <h4>
-                            Farm Management
-                        </h4>
-
-                        <p>
-                            Build and manage your agricultural
-                            operation.
-                        </p>
-
+                        <div class="feature-icon">🌾</div>
+                        <h4>Farm Management</h4>
+                        <p>Build and manage your agricultural operation.</p>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-<!-- =========================================================
-         OUR GAMES
-    ========================================================== -->
 
+    <!-- OUR GAMES -->
     <section class="our-games" id="games">
-
         <div class="container">
-
-            <div class="section-label">
-                Silicon Games
-            </div>
-
-            <h2>
-                Our Games
-            </h2>
-
-            <p class="section-description">
-                Explore the games currently being developed
-                and published by Silicon Games.
-            </p>
-
-
+            <div class="section-label">Silicon Games</div>
+            <h2>Our Games</h2>
+            <p class="section-description">Explore the games currently being developed and published by Silicon Games.</p>
             <div class="games-list">
-
-
-                <!-- REAL FARM -->
-
                 <div class="store-card">
-
-                    <img
-                        src="real-farm.png"
-                        alt="Real Farm Simulator"
-                        class="store-icon">
-
+                    <img src="real-farm.png" alt="Real Farm Simulator" class="store-icon">
                     <div class="store-content">
-
-                        <span class="store-label">
-                            Android · Google Play
-                        </span>
-
-                        <h3>
-                            Real Farm Simulator
-                        </h3>
-
-                        <p>
-                            Plant, harvest, raise animals and
-                            manage your own farm in a realistic
-                            mobile farming simulator.
-                        </p>
-
+                        <span class="store-label">Android · Google Play</span>
+                        <h3>Real Farm Simulator</h3>
+                        <p>Plant, harvest, raise animals and manage your own farm in a realistic mobile farming simulator.</p>
                         <div class="store-actions">
-
-                            <a
-                                class="store-link play-link"
-                                href="https://play.google.com/store/apps/details?id=com.Seeliefy.RealFarm"
-                                target="_blank"
-                                rel="noopener noreferrer">
-
-                                Google Play
-
-                                <span class="store-link-arrow">
-                                    ↗
-                                </span>
-
-                            </a>
-
-                            <a
-                                class="store-link apk-link"
-                                href="https://docs.google.com/uc?export=download&id=1sHuo9uOPG0qdLKteqvtz0vcDP3KjLcLZ"
-                                target="_blank"
-                                rel="noopener noreferrer">
-
-                                Download APK v3.0
-
-                                <span class="store-link-arrow">
-                                    ↓
-                                </span>
-
-                            </a>
-
+                            <a class="store-link play-link" href="https://play.google.com/store/apps/details?id=com.Seeliefy.RealFarm" target="_blank" rel="noopener noreferrer">Google Play <span class="store-link-arrow">↗</span></a>
+                            <a class="store-link apk-link" href="https://docs.google.com/uc?export=download&id=1sHuo9uOPG0qdLKteqvtz0vcDP3KjLcLZ" target="_blank" rel="noopener noreferrer">Download APK v3.0 <span class="store-link-arrow">↓</span></a>
                         </div>
-
                     </div>
-
                 </div>
-
-
-                <!-- CITY BUS SIMULATOR -->
-
                 <div class="store-card">
-
-                    <img
-                        src="city-bus.png"
-                        alt="City Bus Simulator"
-                        class="store-icon">
-
+                    <img src="city-bus.png" alt="City Bus Simulator" class="store-icon">
                     <div class="store-content">
-
-                        <span class="store-label">
-                            Android · Google Play
-                        </span>
-
-                        <h3>
-                            City Bus Simulator
-                        </h3>
-
-                        <p>
-                            Take the wheel, transport passengers
-                            and experience the challenge of
-                            driving a city bus.
-                        </p>
-
+                        <span class="store-label">Android · Google Play</span>
+                        <h3>City Bus Simulator</h3>
+                        <p>Take the wheel, transport passengers and experience the challenge of driving a city bus.</p>
                         <div class="store-actions">
-
-                            <a
-                                class="store-link play-link"
-                                href="https://play.google.com/store/apps/details?id=com.SiliconGames.CityBusSimulator"
-                                target="_blank"
-                                rel="noopener noreferrer">
-
-                                Google Play
-
-                                <span class="store-link-arrow">
-                                    ↗
-                                </span>
-
-                            </a>
-
+                            <a class="store-link play-link" href="https://play.google.com/store/apps/details?id=com.SiliconGames.CityBusSimulator" target="_blank" rel="noopener noreferrer">Google Play <span class="store-link-arrow">↗</span></a>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-<!-- =========================================================
-         STUDIO
-    ========================================================== -->
 
+    <!-- STUDIO -->
     <section class="about" id="studio">
-
         <div class="container">
-
-            <div class="section-label">
-                The Studio
-            </div>
-
-            <h2>
-                Built by Silicon Games.
-            </h2>
-
+            <div class="section-label">The Studio</div>
+            <h2>Built by Silicon Games.</h2>
             <div class="about-grid">
-
                 <div class="about-text">
-
-                    <p>
-                        Silicon Games is an independent game studio
-                        focused on creating interactive experiences
-                        with technology, simulation and attention
-                        to detail.
-                    </p>
-
-                    <p>
-                        Our goal is to create games that feel alive —
-                        systems that interact with each other and
-                        give players freedom to build their own
-                        experience.
-                    </p>
-
-                    <p>
-                        Real Farm Simulator and City Bus Simulator
-                        are part of our growing portfolio of
-                        simulation games for mobile platforms.
-                    </p>
-
+                    <p>Silicon Games is an independent game studio focused on creating interactive experiences with technology, simulation and attention to detail.</p>
+                    <p>Our goal is to create games that feel alive — systems that interact with each other and give players freedom to build their own experience.</p>
+                    <p>Real Farm Simulator and City Bus Simulator are part of our growing portfolio of simulation games for mobile platforms.</p>
                 </div>
-
                 <div class="company-card">
-
-                    <div class="company-logo">
-                        SILICON <span>GAMES</span>
-                    </div>
-
-                    <p>
-                        Independent development studio creating
-                        games and interactive experiences.
-                    </p>
-
+                    <div class="company-logo">SILICON <span>GAMES</span></div>
+                    <p>Independent development studio creating games and interactive experiences.</p>
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    <!-- =========================================================
-         FAQ
-    ========================================================== -->
-
+    <!-- FAQ -->
     <section class="content-section" id="faq">
         <div class="container">
-
             <div class="section-label">Frequently Asked Questions</div>
-
             <h2>Real Farm Simulator FAQ</h2>
-
-            <p class="section-description">
-                Answers to common questions about Real Farm Simulator,
-                development and availability.
-            </p>
-
+            <p class="section-description">Answers to common questions about Real Farm Simulator, development and availability.</p>
             <div class="faq-list">
-
                 <article class="faq-item">
                     <h3>What is Real Farm Simulator?</h3>
-                    <p>
-                        Real Farm Simulator is a mobile farming simulation
-                        developed by Silicon Games. It combines agriculture,
-                        machinery, livestock and farm management.
-                    </p>
+                    <p>Real Farm Simulator is a mobile farming simulation developed by Silicon Games. It combines agriculture, machinery, livestock and farm management.</p>
                 </article>
-
                 <article class="faq-item">
                     <h3>Where can I play the game?</h3>
-                    <p>
-                        The game is being distributed for Android. The current
-                        availability and version can be checked through the
-                        official Google Play listing on this website.
-                    </p>
+                    <p>The game is being distributed for Android. The current availability and version can be checked through the official Google Play listing on this website.</p>
                 </article>
-
                 <article class="faq-item">
                     <h3>Is the game still being developed?</h3>
-                    <p>
-                        Yes. Real Farm Simulator is an independently developed
-                        project, and its systems and content can continue to
-                        evolve through future updates.
-                    </p>
+                    <p>Yes. Real Farm Simulator is an independently developed project, and its systems and content can continue to evolve through future updates.</p>
                 </article>
-
                 <article class="faq-item">
                     <h3>What can I do in the game?</h3>
-                    <p>
-                        Players can work with crops, agricultural machinery,
-                        livestock and farm management systems while developing
-                        their own farming operation.
-                    </p>
+                    <p>Players can work with crops, agricultural machinery, livestock and farm management systems while developing their own farming operation.</p>
                 </article>
-
                 <article class="faq-item">
                     <h3>Will new features be added?</h3>
-                    <p>
-                        Future updates may introduce improvements, new systems
-                        and additional content as development progresses.
-                    </p>
+                    <p>Future updates may introduce improvements, new systems and additional content as development progresses.</p>
                 </article>
-
             </div>
-
         </div>
     </section>
 
-
-    <!-- =========================================================
-         CTA
-    ========================================================== -->
-
+    <!-- CTA -->
     <section class="cta" id="games-cta">
-
         <div class="container">
-
             <div class="cta-box">
-
-                <div class="section-label">
-                    Silicon Games
-                </div>
-
-                <h2>
-                    More games are coming.
-                </h2>
-
-                <p>
-                    Discover our games on Google Play and follow
-                    the development of our upcoming projects.
-                </p>
-
+                <div class="section-label">Silicon Games</div>
+                <h2>More games are coming.</h2>
+                <p>Discover our games on Google Play and follow the development of our upcoming projects.</p>
                 <div class="buttons">
-
-                    <a
-                        class="button button-primary"
-                        href="#games">
-
-                        Explore Our Games
-
-                    </a>
-
+                    <a class="button button-primary" href="#games">Explore Our Games</a>
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-    
-<!-- =========================================================
-     FALE CONOSCO
-========================================================== -->
-
-<section class="contact-section" id="contact">
-    <div class="contact-container">
-
-        <div class="section-label">
-            Estamos aqui para ajudar
+    <!-- FALE CONOSCO -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <div class="section-label">Estamos aqui para ajudar</div>
+            <h2>Fale Conosco</h2>
+            <p class="section-description">
+                Encontrou um problema no jogo, tem uma sugestão ou precisa de ajuda? Envie uma mensagem para a Silicon Games.
+                Se estiver reportando um erro, você pode colar o log completo do console Android no campo de mensagem.
+            </p>
+            <div class="contact-card">
+                <form id="contact-form" class="contact-form">
+                    <div class="contact-field">
+                        <label for="contact-name">Nome</label>
+                        <input type="text" id="contact-name" name="name" maxlength="80" placeholder="Como podemos chamar você?" autocomplete="name" required>
+                    </div>
+                    <div class="contact-field">
+                        <label for="contact-reason">Motivo do contato</label>
+                        <select id="contact-reason" name="reason" required>
+                            <option value="" selected disabled>Selecione um motivo</option>
+                            <option value="Erro ou bug">Erro ou bug no jogo</option>
+                            <option value="Problema ao salvar">Problema ao salvar ou carregar dados</option>
+                            <option value="Desempenho">Desempenho ou travamentos</option>
+                            <option value="Sugestão">Sugestão ou melhoria</option>
+                            <option value="Duvida">Dúvida sobre o jogo</option>
+                            <option value="Outro">Outro assunto</option>
+                        </select>
+                    </div>
+                    <div class="contact-field">
+                        <label for="contact-message">Mensagem</label>
+                        <textarea id="contact-message" name="message" maxlength="20000" placeholder="Descreva o que aconteceu. Se tiver um log do console, cole aqui..." required></textarea>
+                        <p class="contact-hint">Máximo de 20.000 caracteres. Para enviar um log, use o botão "Copiar Dados" no console do jogo e cole o conteúdo aqui.</p>
+                    </div>
+                    <div class="contact-honeypot" aria-hidden="true">
+                        <label for="contact-website">Não preencha este campo</label>
+                        <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <button type="submit" id="contact-submit" class="button button-primary contact-submit">Enviar mensagem</button>
+                    <div id="contact-status" class="contact-status" role="status" aria-live="polite"></div>
+                </form>
+            </div>
         </div>
-
-        <h2>Fale Conosco</h2>
-
-        <p class="section-description">
-            Encontrou um problema no jogo, tem uma sugestão ou
-            precisa de ajuda? Envie uma mensagem para a Silicon Games.
-            Se estiver reportando um erro, você pode colar o log
-            completo do console Android no campo de mensagem.
-        </p>
-
-        <div class="contact-card">
-
-            <form id="contact-form" class="contact-form">
-
-                <div class="contact-field">
-                    <label for="contact-name">Nome</label>
-                    <input
-                        type="text"
-                        id="contact-name"
-                        name="name"
-                        maxlength="80"
-                        placeholder="Como podemos chamar você?"
-                        autocomplete="name"
-                        required>
-                </div>
-
-                <div class="contact-field">
-                    <label for="contact-reason">Motivo do contato</label>
-
-                    <select
-                        id="contact-reason"
-                        name="reason"
-                        required>
-
-                        <option value="" selected disabled>
-                            Selecione um motivo
-                        </option>
-
-                        <option value="Erro ou bug">
-                            Erro ou bug no jogo
-                        </option>
-
-                        <option value="Problema ao salvar">
-                            Problema ao salvar ou carregar dados
-                        </option>
-
-                        <option value="Desempenho">
-                            Desempenho ou travamentos
-                        </option>
-
-                        <option value="Sugestão">
-                            Sugestão ou melhoria
-                        </option>
-
-                        <option value="Duvida">
-                            Dúvida sobre o jogo
-                        </option>
-
-                        <option value="Outro">
-                            Outro assunto
-                        </option>
-                    </select>
-                </div>
-
-                <div class="contact-field">
-                    <label for="contact-message">Mensagem</label>
-
-                    <textarea
-                        id="contact-message"
-                        name="message"
-                        maxlength="20000"
-                        placeholder="Descreva o que aconteceu. Se tiver um log do console, cole aqui..."
-                        required></textarea>
-
-                    <p class="contact-hint">
-                        Máximo de 20.000 caracteres. Para enviar um log,
-                        use o botão "Copiar Dados" no console do jogo e
-                        cole o conteúdo aqui.
-                    </p>
-                </div>
-
-                <!-- Campo antispam: deve permanecer vazio -->
-                <div class="contact-honeypot" aria-hidden="true">
-                    <label for="contact-website">Não preencha este campo</label>
-                    <input
-                        type="text"
-                        id="contact-website"
-                        name="website"
-                        tabindex="-1"
-                        autocomplete="off">
-                </div>
-
-                <button
-                    type="submit"
-                    id="contact-submit"
-                    class="button button-primary contact-submit">
-
-                    Enviar mensagem
-
-                </button>
-
-                <div
-                    id="contact-status"
-                    class="contact-status"
-                    role="status"
-                    aria-live="polite">
-                </div>
-
-            </form>
-
-        </div>
-    </div>
-</section>
-
-
+    </section>
 </main>
-
-    
 
 <footer>
     <div class="footer-content">
-
-        <div class="footer-brand">
-            SILICON <span>GAMES</span>
-        </div>
-
+        <div class="footer-brand">SILICON <span>GAMES</span></div>
         <p>
             © 2026 Silicon Games. Independent game development studio.
             <br>
@@ -1927,212 +1037,181 @@
                 Visitas únicas: <span id="visit-counter">carregando...</span>
             </span>
         </p>
-
     </div>
 </footer>
 
-    <script type="module">
-  // 1. CORREÇÃO: Imports completos e versão estável (10.8.0)
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-  
-import {
-    getDatabase,
-    ref,
-    get,
-    set,
-    runTransaction,
-    push,
-    serverTimestamp
-} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, get, set, runTransaction, push, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyBx7xBQLRe2BBaKUqTkEMw5fcwARUIzMtw",
-    authDomain: "sgames-bfefa.firebaseapp.com",
-    databaseURL: "https://sgames-bfefa-default-rtdb.firebaseio.com",
-    projectId: "sgames-bfefa",
-    storageBucket: "sgames-bfefa.firebasestorage.app",
-    messagingSenderId: "450938391124",
-    appId: "1:450938391124:web:938804626cb86c376c7bc1",
-    measurementId: "G-LDXYDG9ZCK"
-  };
+    const firebaseConfig = {
+        apiKey: "AIzaSyBx7xBQLRe2BBaKUqTkEMw5fcwARUIzMtw",
+        authDomain: "sgames-bfefa.firebaseapp.com",
+        databaseURL: "https://sgames-bfefa-default-rtdb.firebaseio.com",
+        projectId: "sgames-bfefa",
+        storageBucket: "sgames-bfefa.firebasestorage.app",
+        messagingSenderId: "450938391124",
+        appId: "1:450938391124:web:938804626cb86c376c7bc1",
+        measurementId: "G-LDXYDG9ZCK"
+    };
 
-  // Inicializa o Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  
-  // 2. CORREÇÃO: Inicializa o banco de dados (estava faltando esta linha)
-  const db = getDatabase(app);
+    // Inicializa o Firebase
+    const app = initializeApp(firebaseConfig);
+    
+    // CORREÇÃO 1: Proteger Analytics para não quebrar o script se rodar localmente (file://)
+    let analytics;
+    try {
+        const { getAnalytics } = await import("https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js");
+        analytics = getAnalytics(app);
+    } catch (e) {
+        console.warn("Analytics não inicializado (provavelmente rodando localmente ou bloqueado). Isso não afeta o formulário.", e);
+    }
 
-        
-/* =========================================================
-   FALE CONOSCO — FIREBASE REALTIME DATABASE
-========================================================= */
+    // Inicializa o banco de dados
+    const db = getDatabase(app);
 
-const contactForm = document.getElementById("contact-form");
-const contactSubmit = document.getElementById("contact-submit");
-const contactStatus = document.getElementById("contact-status");
+    /* =========================================================
+       FALE CONOSCO — FIREBASE REALTIME DATABASE
+    ========================================================= */
+    const contactForm = document.getElementById("contact-form");
+    const contactSubmit = document.getElementById("contact-submit");
+    const contactStatus = document.getElementById("contact-status");
 
-let contactSending = false;
+    let contactSending = false;
 
-function showContactStatus(message, type) {
-    contactStatus.textContent = message;
-    contactStatus.className = "contact-status " + type;
-}
+    function showContactStatus(message, type) {
+        contactStatus.textContent = message;
+        contactStatus.className = "contact-status"; // Reseta classes
+        contactStatus.classList.add(type);
+        contactStatus.classList.add("show"); // Ativa a animação CSS
+    }
 
-if (contactForm) {
-    contactForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
+    if (contactForm) {
+        contactForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            console.log("Formulário submetido. Iniciando validação...");
 
-        if (contactSending) return;
+            if (contactSending) return;
 
-        const name = document
-            .getElementById("contact-name")
-            .value.trim();
+            const name = document.getElementById("contact-name").value.trim();
+            const reason = document.getElementById("contact-reason").value;
+            const message = document.getElementById("contact-message").value.trim();
+            const honeypot = document.getElementById("contact-website").value.trim();
 
-        const reason = document
-            .getElementById("contact-reason")
-            .value;
+            if (honeypot) {
+                console.warn("Spam detectado (honeypot preenchido).");
+                return;
+            }
 
-        const message = document
-            .getElementById("contact-message")
-            .value.trim();
+            if (!name || !reason || !message) {
+                showContactStatus("Preencha todos os campos antes de enviar.", "error");
+                return;
+            }
 
-        const honeypot = document
-            .getElementById("contact-website")
-            .value.trim();
+            if (name.length > 80 || message.length > 20000) {
+                showContactStatus("Confira os limites de caracteres do formulário.", "error");
+                return;
+            }
 
-        // Campo invisível usado como uma verificação antispam simples.
-        if (honeypot) return;
+            contactSending = true;
+            contactSubmit.disabled = true;
+            contactSubmit.textContent = "Enviando...";
+            contactStatus.className = "contact-status"; // Esconde status anterior
 
-        if (!name || !reason || !message) {
-            showContactStatus(
-                "Preencha todos os campos antes de enviar.",
-                "error"
-            );
-            return;
+            try {
+                console.log("Tentando salvar no Firebase...");
+                const messagesRef = ref(db, "contactMessages");
+                const newMessageRef = push(messagesRef);
+
+                await set(newMessageRef, {
+                    name: name,
+                    reason: reason,
+                    message: message,
+                    createdAt: serverTimestamp(),
+                    status: "new",
+                    source: "website"
+                });
+
+                console.log("Mensagem salva com sucesso!");
+                contactForm.reset();
+                showContactStatus("Mensagem enviada com sucesso! Obrigado por entrar em contato com a Silicon Games.", "success");
+
+            } catch (error) {
+                console.error("Erro detalhado ao enviar mensagem:", error);
+                
+                let errorMsg = "Não foi possível enviar sua mensagem. Tente novamente mais tarde.";
+                if (error.code === 'permission-denied') {
+                    errorMsg = "Erro de permissão no banco de dados. O administrador precisa ajustar as Regras do Firebase.";
+                }
+                
+                showContactStatus(errorMsg, "error");
+            } finally {
+                contactSending = false;
+                contactSubmit.disabled = false;
+                contactSubmit.textContent = "Enviar mensagem";
+            }
+        });
+    }
+
+    /* =========================================================
+       CONTADOR DE VISITAS
+    ========================================================= */
+    async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function getVisitorIP() {
+        try {
+            const response = await fetch('https://api.ipify.org?format=json');
+            const data = await response.json();
+            return data.ip;
+        } catch (error) {
+            console.warn("Não foi possível obter o IP. A visita não será contada como única.");
+            return null;
         }
+    }
 
-        if (name.length > 80 || message.length > 20000) {
-            showContactStatus(
-                "Confira os limites de caracteres do formulário.",
-                "error"
-            );
-            return;
-        }
-
-        contactSending = true;
-        contactSubmit.disabled = true;
-        contactSubmit.textContent = "Enviando...";
-        contactStatus.className = "contact-status";
+    async function trackVisit() {
+        const counterElement = document.getElementById('visit-counter');
+        const ip = await getVisitorIP();
+        const today = new Date().toISOString().split('T')[0];
 
         try {
-            const messagesRef = ref(db, "contactMessages");
-            const newMessageRef = push(messagesRef);
+            const totalVisitsRef = ref(db, 'visits/total');
+            const totalSnapshot = await get(totalVisitsRef);
+            const currentTotal = totalSnapshot.val() || 0;
+            
+            if (counterElement) {
+                counterElement.textContent = currentTotal.toLocaleString('pt-BR');
+            }
 
-            await set(newMessageRef, {
-                name: name,
-                reason: reason,
-                message: message,
-                createdAt: serverTimestamp(),
-                status: "new",
-                source: "website"
-            });
+            if (!ip) return;
 
-            contactForm.reset();
+            const hashedIp = await sha256(ip);
+            const ipKey = `visits/ip_${hashedIp}_${today}`;
+            const ipVisitRef = ref(db, ipKey);
 
-            showContactStatus(
-                "Mensagem enviada com sucesso! Obrigado por entrar em contato com a Silicon Games.",
-                "success"
-            );
-
+            const snapshot = await get(ipVisitRef);
+            
+            if (!snapshot.exists()) {
+                await runTransaction(totalVisitsRef, (current) => (current || 0) + 1);
+                await set(ipVisitRef, true);
+                
+                if (counterElement) {
+                    const newTotalSnapshot = await get(totalVisitsRef);
+                    counterElement.textContent = (newTotalSnapshot.val() || 0).toLocaleString('pt-BR');
+                }
+            }
         } catch (error) {
-            console.error("Erro ao enviar mensagem de contato:", error);
-
-            showContactStatus(
-                "Não foi possível enviar sua mensagem. Tente novamente mais tarde.",
-                "error"
-            );
-
-        } finally {
-            contactSending = false;
-            contactSubmit.disabled = false;
-            contactSubmit.textContent = "Enviar mensagem";
+            console.error("Erro ao registrar visita:", error);
+            if (counterElement) counterElement.textContent = "Indisponível";
         }
-    });
-}
-
-
-  // Função para converter texto em hash SHA-256 (Hex)
-  async function sha256(message) {
-    const msgBuffer = new TextEncoder().encode(message);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-  }
-
-  // Função para obter o IP do visitante
-  async function getVisitorIP() {
-    try {
-      const response = await fetch('https://api.ipify.org?format=json');
-      const data = await response.json();
-      return data.ip;
-    } catch (error) {
-      console.warn("Não foi possível obter o IP. A visita não será contada como única.");
-      return null;
     }
-  }
 
-  async function trackVisit() {
-    const counterElement = document.getElementById('visit-counter');
-    const ip = await getVisitorIP();
-    const today = new Date().toISOString().split('T')[0]; // Formato: YYYY-MM-DD
-
-    try {
-      // Busca o total atual para exibir na tela
-      const totalVisitsRef = ref(db, 'visits/total');
-      const totalSnapshot = await get(totalVisitsRef);
-      const currentTotal = totalSnapshot.val() || 0;
-      
-      if (counterElement) {
-        counterElement.textContent = currentTotal.toLocaleString('pt-BR');
-      }
-
-      // Se não conseguiu obter o IP, apenas exibe o total e não registra
-      if (!ip) return;
-
-      // Gera o hash do IP + data de hoje
-      const hashedIp = await sha256(ip);
-      const ipKey = `visits/ip_${hashedIp}_${today}`;
-      const ipVisitRef = ref(db, ipKey);
-
-      // Verifica se este hash já foi registrado hoje
-      const snapshot = await get(ipVisitRef);
-      
-      if (!snapshot.exists()) {
-        // Incrementa o total com segurança (evita condições de corrida)
-        await runTransaction(totalVisitsRef, (current) => {
-          return (current || 0) + 1;
-        });
-        
-        // Marca como visitado hoje
-        await set(ipVisitRef, true);
-        
-        // Atualiza a tela com o novo valor
-        if (counterElement) {
-          const newTotalSnapshot = await get(totalVisitsRef);
-          counterElement.textContent = (newTotalSnapshot.val() || 0).toLocaleString('pt-BR');
-        }
-      }
-
-    } catch (error) {
-      console.error("Erro ao registrar visita:", error);
-      if (counterElement) counterElement.textContent = "Indisponível";
-    }
-  }
-
-  // Executa ao carregar
-  trackVisit();
+    trackVisit();
 </script>
 
 </body>
