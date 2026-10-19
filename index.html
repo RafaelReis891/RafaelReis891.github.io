@@ -1085,6 +1085,8 @@
                 FAQ
             </a>
 
+            <a href="#contact">Fale Conosco</a>
+
         </nav>
 
     </div>
@@ -1540,7 +1542,7 @@
          CTA
     ========================================================== -->
 
-    <section class="cta" id="contact">
+    <section class="cta" id="games-cta">
 
         <div class="container">
 
@@ -1730,7 +1732,16 @@
   // 1. CORREÇÃO: Imports completos e versão estável (10.8.0)
   import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-  import { getDatabase, ref, get, set, runTransaction } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+  
+import {
+    getDatabase,
+    ref,
+    get,
+    set,
+    runTransaction,
+    push,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyBx7xBQLRe2BBaKUqTkEMw5fcwARUIzMtw",
@@ -1749,6 +1760,105 @@
   
   // 2. CORREÇÃO: Inicializa o banco de dados (estava faltando esta linha)
   const db = getDatabase(app);
+
+        
+/* =========================================================
+   FALE CONOSCO — FIREBASE REALTIME DATABASE
+========================================================= */
+
+const contactForm = document.getElementById("contact-form");
+const contactSubmit = document.getElementById("contact-submit");
+const contactStatus = document.getElementById("contact-status");
+
+let contactSending = false;
+
+function showContactStatus(message, type) {
+    contactStatus.textContent = message;
+    contactStatus.className = "contact-status " + type;
+}
+
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (contactSending) return;
+
+        const name = document
+            .getElementById("contact-name")
+            .value.trim();
+
+        const reason = document
+            .getElementById("contact-reason")
+            .value;
+
+        const message = document
+            .getElementById("contact-message")
+            .value.trim();
+
+        const honeypot = document
+            .getElementById("contact-website")
+            .value.trim();
+
+        // Campo invisível usado como uma verificação antispam simples.
+        if (honeypot) return;
+
+        if (!name || !reason || !message) {
+            showContactStatus(
+                "Preencha todos os campos antes de enviar.",
+                "error"
+            );
+            return;
+        }
+
+        if (name.length > 80 || message.length > 20000) {
+            showContactStatus(
+                "Confira os limites de caracteres do formulário.",
+                "error"
+            );
+            return;
+        }
+
+        contactSending = true;
+        contactSubmit.disabled = true;
+        contactSubmit.textContent = "Enviando...";
+        contactStatus.className = "contact-status";
+
+        try {
+            const messagesRef = ref(db, "contactMessages");
+            const newMessageRef = push(messagesRef);
+
+            await set(newMessageRef, {
+                name: name,
+                reason: reason,
+                message: message,
+                createdAt: serverTimestamp(),
+                status: "new",
+                source: "website"
+            });
+
+            contactForm.reset();
+
+            showContactStatus(
+                "Mensagem enviada com sucesso! Obrigado por entrar em contato com a Silicon Games.",
+                "success"
+            );
+
+        } catch (error) {
+            console.error("Erro ao enviar mensagem de contato:", error);
+
+            showContactStatus(
+                "Não foi possível enviar sua mensagem. Tente novamente mais tarde.",
+                "error"
+            );
+
+        } finally {
+            contactSending = false;
+            contactSubmit.disabled = false;
+            contactSubmit.textContent = "Enviar mensagem";
+        }
+    });
+}
+
 
   // Função para converter texto em hash SHA-256 (Hex)
   async function sha256(message) {
